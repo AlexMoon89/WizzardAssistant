@@ -1,0 +1,842 @@
+import { TarotCard } from "@/types";
+
+export default [
+  // MAJOR ARCANA
+  {
+    id: 0,
+    name: {
+      en: "The Fool",
+      es: "El Loco",
+    },
+    number: 0,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["New beginnings", "Innocence", "Spontaneity", "Free spirit", "Wisdom"],
+        reversed: ["Recklessness", "Risk-taking", "Bad choices", "Naivety", "Folly"],
+      },
+      es: {
+        upright: ["Nuevos comienzos", "Inocencia", "Espontaneidad", "Espíritu libre", "Sabiduría"],
+        reversed: ["Imprudencia", "Toma de riesgos", "Malas decisiones", "Ingenuidad", "Locura"],
+      },
+    },
+    element: "Air",
+    planet: "Uranus",
+    hebrewLetter: "Aleph",
+    path: "11",
+    description: {
+      en: "The Spirit of the Ether. The Crown of Wisdom, the Primum Mobile, acting through Air upon the Zodiac. The symbol of mundane wisdom held in check by perfect innocence. It represents idea, thought, spirituality, that which endeavors to transcend the material. The Fool is related to Harparkrat, Krishna, and Dionysus.",
+      es: "El Espíritu del Éter. La Corona de la Sabiduría, el Primum Mobile, actuando a través del Aire sobre el Zodíaco. El símbolo de la sabiduría mundana mantenido en jaque por la perfecta inocencia. Representa idea, pensamiento, espiritualidad, lo que se esfuerza por elevarse por encima de lo material. El Loco está relacionado con Harparkrat, Krishna y Dionisios.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1635407640793-2ba08957adfb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 1,
+    name: {
+      en: "The Magician",
+      es: "El Mago",
+    },
+    number: 1,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Manifestation", "Power", "Skill", "Concentration", "Wisdom"],
+        reversed: ["Manipulation", "Untapped talents", "Illusion", "Trickery", "Cunning"],
+      },
+      es: {
+        upright: ["Manifestación", "Poder", "Habilidad", "Concentración", "Sabiduría"],
+        reversed: ["Manipulación", "Talentos sin explotar", "Ilusión", "Engaño", "Astucia"],
+      },
+    },
+    element: "Air",
+    planet: "Mercury",
+    hebrewLetter: "Beth",
+    path: "12",
+    description: {
+      en: "The Magus of Power. The Crown of Understanding, the principle of material production, the Primum Mobile, acting through philosophical Mercury upon Saturn. Represents union and balance of elemental powers controlled by the mind. The path of Beth connects Kether, the Crown, with Binah, the Great Mother. The Magician is reflected in the intellect that gathers and stores knowledge.",
+      es: "El Mago del Poder. La Corona del Entendimiento, el principio de la producción material, el Primum Mobile, actuando a través del Mercurio filosófico sobre Saturno. Representa unión y balance de los poderes elementales controlados por la mente. El sendero de Beth une a Kether, la Corona, con Binah, la Aima Elohim. El Mago es reflejado en el intelecto que reúne y almacena el conocimiento.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1572877126473-cd6432959ab6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 2,
+    name: {
+      en: "The High Priestess",
+      es: "La Sacerdotisa",
+    },
+    number: 2,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Intuition", "Mystery", "Spiritual insight", "Inner voice", "Change"],
+        reversed: ["Secrets", "Disconnection from intuition", "Withdrawal", "Silence", "Fluctuation"],
+      },
+      es: {
+        upright: ["Intuición", "Misterio", "Visión espiritual", "Voz interior", "Cambio"],
+        reversed: ["Secretos", "Desconexión de la intuición", "Retraimiento", "Silencio", "Fluctuación"],
+      },
+    },
+    element: "Water",
+    planet: "Moon",
+    hebrewLetter: "Gimel",
+    path: "13",
+    description: {
+      en: "The Priestess of the Silver Star. The Crown of Beauty, the Principle of Sovereignty and Beauty, the Primum Mobile, acting through the Moon upon the Sun. She rules the long path connecting Kether with Tiphareth. She is the great feminine force that controls the source of life, gathering all energizing forces and holding them in solution until their release.",
+      es: "La Sacerdotisa de la Estrella de Plata. La Corona de la Belleza, el Principio de la Soberanía y de la Belleza, el Primum Mobile, actuando a través de la Luna sobre el Sol. Ella rige el largo sendero que une Kether con Tiphareth. Es la gran fuerza femenina que controla la misma fuente de vida, reuniendo todas las fuerzas energizantes y manteniéndolas en solución hasta el tiempo de su liberación.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1633146707117-d6509e3a3f70?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 3,
+    name: {
+      en: "The Empress",
+      es: "La Emperatriz",
+    },
+    number: 3,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Fertility", "Nurturing", "Abundance", "Creativity", "Love"],
+        reversed: ["Creative block", "Dependency", "Emptiness", "Stifled creativity"],
+      },
+      es: {
+        upright: ["Fertilidad", "Crianza", "Abundancia", "Creatividad", "Amor"],
+        reversed: ["Bloqueo creativo", "Dependencia", "Vacío", "Creatividad sofocada"],
+      },
+    },
+    element: "Earth",
+    planet: "Venus",
+    hebrewLetter: "Daleth",
+    path: "14",
+    description: {
+      en: "The Daughter of the Mighty Ones. The Wisdom of Understanding, the union of the Powers of Origin and Production, the Sphere of the Zodiac acting through Venus upon Saturn. She is an aspect of Isis, suggesting the positive and creative side of nature. In the Egyptian trilogy, Isis represents the love aspect, while Hathor is more mystical.",
+      es: "La Hija de los Poderosos. La Sabiduría del Entendimiento, la unión de los Poderes del Origen y la Producción, la Esfera del Zodíaco actuando a través de Venus sobre Saturno. Ella es un aspecto de Isis, aquí se sugiere el lado positivo y creativo de la naturaleza. Isis representa el aspecto amor, mientras que Hathor es más mística.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1578908844516-7c1f4a8207fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 4,
+    name: {
+      en: "The Emperor",
+      es: "El Emperador",
+    },
+    number: 4,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Authority", "Structure", "Control", "Leadership", "Power"],
+        reversed: ["Domination", "Excessive control", "Rigidity", "Stubbornness"],
+      },
+      es: {
+        upright: ["Autoridad", "Estructura", "Control", "Liderazgo", "Poder"],
+        reversed: ["Dominación", "Control excesivo", "Rigidez", "Terquedad"],
+      },
+    },
+    element: "Fire",
+    zodiac: "Aries",
+    hebrewLetter: "Heh",
+    path: "15",
+    description: {
+      en: "The Son of the Morning, Chief among the Mighty. The Wisdom of Sovereignty and Beauty, the origin of both, the sphere of the zodiac acting through Aries upon the Sun, initiating Spring. Here are the great energizing forces as indicated by the shades of red. He is Ho Nike, the Conqueror, warm, passionate, impetuous, the apotheosis of Mars in both love and war.",
+      es: "El Hijo de la Mañana, el Jefe entre los Poderosos. La Sabiduría de la Soberanía y de la Belleza, y el origen de ambas, la esfera del zodíaco actuando a través de Aries sobre el Sol e iniciando la Primavera. Aquí están las grandes fuerzas energizantes tal como indican las distintas tonalidades del rojo. Es Ho Nike, el Conquistador, cálido, apasionado, impetuoso, la apoteosis de Marte tanto en el amor como en la guerra.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1617682332230-dd0363042892?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 5,
+    name: {
+      en: "The Hierophant",
+      es: "El Hierofante",
+    },
+    number: 5,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Tradition", "Conformity", "Spiritual guidance", "Education", "Wisdom"],
+        reversed: ["Rebellion", "Subversion", "Unconventional wisdom", "Freedom"],
+      },
+      es: {
+        upright: ["Tradición", "Conformidad", "Guía espiritual", "Educación", "Sabiduría"],
+        reversed: ["Rebelión", "Subversión", "Sabiduría no convencional", "Libertad"],
+      },
+    },
+    element: "Earth",
+    zodiac: "Taurus",
+    hebrewLetter: "Vau",
+    path: "16",
+    description: {
+      en: "The Magus of the Eternal Gods. The Great Priest is the counterpart of the Great Priestess. Just as Aries is the house of Mars and the exaltation of the Sun, Taurus is the house of Venus and the exaltation of the Moon. He is thus the reflective or mystical aspect of the masculine. He is the thinker in contrast to the man of action who is the Emperor.",
+      es: "El Mago de los Dioses Eternos. El Gran Sacerdote es la contraparte de la Gran Sacerdotisa. Igual que Aries es la casa de Marte y la exaltación del Sol, Tauro es la casa de Venus y la exaltación de la Luna. Él es, así, el aspecto reflexivo o místico de lo masculino. Es el pensador en contraste con el hombre de acción que es el Emperador.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1590622783586-e5d5a128342f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 6,
+    name: {
+      en: "The Lovers",
+      es: "Los Amantes",
+    },
+    number: 6,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Harmony", "Union", "Choices", "Alignment of values", "Love"],
+        reversed: ["Disharmony", "Imbalance", "Misalignment", "Conflict of values"],
+      },
+      es: {
+        upright: ["Armonía", "Unión", "Elecciones", "Alineación de valores", "Amor"],
+        reversed: ["Desarmonía", "Desequilibrio", "Desalineación", "Conflicto de valores"],
+      },
+    },
+    element: "Air",
+    zodiac: "Gemini",
+    hebrewLetter: "Zayin",
+    path: "17",
+    description: {
+      en: "The Children of the Voice, Oracle of the Mighty Gods. The impact of inspiration on intuition resulting in illumination and liberation, the sword cutting the bonds of habit and materialism, Perseus rescuing Andromeda from the Dragon of fear and the waters of stagnation.",
+      es: "Los Hijos de la Voz Divina, los Oráculos de los Dioses Poderosos. El impacto de la inspiración en la intuición resultando en la iluminación y liberación, la espada cortando las ataduras del hábito y del materialismo, Perseo rescatando a Andrómeda del Dragón del miedo y las aguas del estancamiento.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1588672805776-140e018a2b3c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 7,
+    name: {
+      en: "The Chariot",
+      es: "El Carro",
+    },
+    number: 7,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Control", "Willpower", "Victory", "Assertion", "Determination"],
+        reversed: ["Lack of control", "Lack of direction", "Aggression", "Defeat"],
+      },
+      es: {
+        upright: ["Control", "Fuerza de voluntad", "Victoria", "Afirmación", "Determinación"],
+        reversed: ["Falta de control", "Falta de dirección", "Agresión", "Derrota"],
+      },
+    },
+    element: "Water",
+    zodiac: "Cancer",
+    hebrewLetter: "Cheth",
+    path: "18",
+    description: {
+      en: "The Child of the Powers of the Waters, the Lord of the Triumph of Light. Understanding acting upon Severity. Saturn acting through Cancer on Mars. Here is a symbol of the Spirit of man controlling the lower principles, soul and body, and thus passing triumphantly through the astral plane, rising above the clouds of illusion and penetrating into the higher spheres.",
+      es: "El Hijo del Poder de las Aguas, el Señor del Triunfo de la Luz. El Entendimiento actuando sobre la Severidad. Saturno actuando a través de Cáncer sobre Marte. Es un símbolo del Espíritu del hombre controlando los principios inferiores, alma y cuerpo, y de esta índole pasando triunfalmente a través del plano astral, elevándose por encima de las nubes de la ilusión y penetrando en las esferas superiores.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1589394697202-8eb56cf8c96e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 8,
+    name: {
+      en: "Strength",
+      es: "La Fuerza",
+    },
+    number: 8,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Courage", "Inner strength", "Persuasion", "Influence", "Compassion"],
+        reversed: ["Self-doubt", "Weakness", "Insecurity", "Raw emotion", "Vulnerability"],
+      },
+      es: {
+        upright: ["Coraje", "Fuerza interior", "Persuasión", "Influencia", "Compasión"],
+        reversed: ["Autoduda", "Debilidad", "Inseguridad", "Emoción cruda", "Vulnerabilidad"],
+      },
+    },
+    element: "Fire",
+    zodiac: "Leo",
+    hebrewLetter: "Teth",
+    path: "19",
+    description: {
+      en: "The Daughter of the Flaming Sword, Leader of the Lion. Mercy tempering Severity. The Glory of Strength. Jupiter acting through Leo on Mars. Also represents the mastery of the lower by the higher. But in this case it is the soul that holds the passions in check, though her feet are still planted on earth and the dark veil still floats around her head and clings to her body.",
+      es: "La Guía de la Espada Llameante, La Guía del León. La Misericordia templando a la Severidad. La Gloria de la Fuerza. Júpiter actuando a través de Leo sobre Marte. También representa la maestría de lo inferior por lo superior. Pero en este caso se trata del alma que mantiene en jaque a las pasiones, aunque sus pies están todavía plantados en la tierra y el velo oscuro todavía flota alrededor de la cabeza y adhiere a su cuerpo.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1633596650275-5064ec4b09c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 9,
+    name: {
+      en: "The Hermit",
+      es: "El Ermitaño",
+    },
+    number: 9,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Soul-searching", "Introspection", "Solitude", "Inner guidance", "Wisdom"],
+        reversed: ["Isolation", "Loneliness", "Withdrawal", "Rejection", "Misanthropy"],
+      },
+      es: {
+        upright: ["Búsqueda del alma", "Introspección", "Soledad", "Guía interior", "Sabiduría"],
+        reversed: ["Aislamiento", "Soledad", "Retiro", "Rechazo", "Misantropía"],
+      },
+    },
+    element: "Earth",
+    zodiac: "Virgo",
+    hebrewLetter: "Yod",
+    path: "20",
+    description: {
+      en: "The Prophet of the Eternal, the Magus of the Voice of Light. The Mercy of Beauty, the Magnificence of Sovereignty, Jupiter acting through Virgo on the Sun. Prudence. The man dressed with hood and mantle, carrying a lamp to illuminate the Path and a staff as support for his steps; he is the eternal seeker, the Pilgrim Soul.",
+      es: "El Mago de la Voz de la Luz, El Profeta de los Dioses. La Misericordia de la Belleza, la Magnificencia de la Soberanía, Júpiter actuando a través de Virgo sobre el Sol. Prudencia. El hombre vestido con capucha y manto, llevando una lámpara para iluminar el Sendero y un cayado como soporte de sus pasos, él es el eterno buscador, el alma Peregrina.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1572205222386-9d278d575e70?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 10,
+    name: {
+      en: "Wheel of Fortune",
+      es: "La Rueda de la Fortuna",
+    },
+    number: 10,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Good luck", "Karma", "Destiny", "Fortune", "Cycles"],
+        reversed: ["Bad luck", "Resistance to change", "Breaking cycles", "Disruption"],
+      },
+      es: {
+        upright: ["Buena suerte", "Karma", "Destino", "Fortuna", "Ciclos"],
+        reversed: ["Mala suerte", "Resistencia al cambio", "Ruptura de ciclos", "Perturbación"],
+      },
+    },
+    element: "Fire",
+    planet: "Jupiter",
+    hebrewLetter: "Kaph",
+    path: "21",
+    description: {
+      en: "The Lord of the Forces of Life. The Mercy and Magnificence of Victory. Jupiter acting directly through Jupiter on Venus. In the Tree of Life, the Wheel is situated in the Pillar of Mercy forming the main pillar that links Netzach to Chesed, Victory to Mercy. Representing the revolution of experience and progress, the steps of zodiac, the rotating staircase.",
+      es: "El Señor de las Fuerzas de la Vida. La Misericordia y la Magnificencia de la Victoria. Júpiter actuando a través de Júpiter directamente sobre Venus. En el Árbol de la Vida, la Rueda está situada en el Pilar de la Misericordia formando la columna principal que vincula Netzach a Chesed, la Victoria a la Misericordia. Representando la revolución de la experiencia y del progreso, los peldaños de zodíaco, la escalera giratoria.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1478031615473-c8dd597a74ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 11,
+    name: {
+      en: "Justice",
+      es: "La Justicia",
+    },
+    number: 11,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Justice", "Fairness", "Truth", "Balance", "Law"],
+        reversed: ["Unfairness", "Dishonesty", "Imbalance", "Bias", "Avoidance"],
+      },
+      es: {
+        upright: ["Justicia", "Equidad", "Verdad", "Equilibrio", "Ley"],
+        reversed: ["Injusticia", "Deshonestidad", "Desequilibrio", "Prejuicio", "Evasión"],
+      },
+    },
+    element: "Air",
+    zodiac: "Libra",
+    hebrewLetter: "Lamed",
+    path: "22",
+    description: {
+      en: "The Daughter of the Lord of Truth, the Holder of the Balances. The Severity of Beauty and Sovereignty. Mars acting through Libra on the Sun. Nephtys, the third aspect of the Moon, the twin sister of Isis. Justice in contraposition to Love. Her emblems are the Sword and the Balance.",
+      es: "La Hija del Señor de la Verdad, La Sustentadora de la Balanza. La Severidad de la Belleza y la Soberanía. Marte actuando a través de Libra sobre el Sol. Nephtys, el tercer aspecto de la Luna, la hermana gemela de Isis. Justicia en contraposición a Amor. Sus emblemas son la Espada y la Balanza.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 12,
+    name: {
+      en: "The Hanged Man",
+      es: "El Colgado",
+    },
+    number: 12,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Sacrifice", "Perspective", "Suspension", "Letting go", "Surrender"],
+        reversed: ["Martyrdom", "Indecision", "Delay", "Resistance", "Stalling"],
+      },
+      es: {
+        upright: ["Sacrificio", "Perspectiva", "Suspensión", "Soltar", "Rendición"],
+        reversed: ["Martirio", "Indecisión", "Retraso", "Resistencia", "Estancamiento"],
+      },
+    },
+    element: "Water",
+    planet: null,
+    hebrewLetter: "Mem",
+    path: "23",
+    description: {
+      en: "The Spirit of the Mighty Waters. The Severity of Splendor. The Execution of Judgment. Mars acting through Water on Mercury. An elusive symbol for being deeply significant. It is the sacrifice, the immersion of the high into the low to sublimate the low. It is the descent of the Spirit into Matter, the incarnation of God in Man.",
+      es: "El Espíritu de las Aguas Poderosas. La Severidad del Esplendor. La Ejecución del Juicio. Marte actuando a través del Agua sobre Mercurio. Un símbolo evasivo por ser profundamente significante. Es el sacrificio, la inmersión de lo alto en lo bajo para sublimar lo bajo. Es el descenso del Espíritu en la Materia, la encarnación de Dios en el Hombre.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1564528183203-ec84690e06a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 13,
+    name: {
+      en: "Death",
+      es: "La Muerte",
+    },
+    number: 13,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Transformation", "Endings", "Change", "Transition", "Letting go"],
+        reversed: ["Resistance to change", "Inability to move on", "Stagnation", "Fear of change"],
+      },
+      es: {
+        upright: ["Transformación", "Finales", "Cambio", "Transición", "Soltar"],
+        reversed: ["Resistencia al cambio", "Incapacidad para seguir adelante", "Estancamiento", "Miedo al cambio"],
+      },
+    },
+    element: "Water",
+    zodiac: "Scorpio",
+    hebrewLetter: "Nun",
+    path: "24",
+    description: {
+      en: "The Child of the Great Transformers, The Lord of the Gates of Death. The Sovereignty and results of Victory. The Sun acting through Scorpio on Venus, or Osiris the destructive power of Typhon, afflicting Isis. The Sign of Transmutation and disintegration. Only the skeleton survives the destructive power of time.",
+      es: "El Hijo de los Grandes Transformadores, El Señor de las Puertas de la Muerte. La Soberanía y los resultados de la Victoria. El Sol actuando a través de Escorpio sobre Venus, o bien Osiris el poder destructor de Typhon, afligiendo a Isis. El Signo de la Transmutación y la desintegración. Solo el esqueleto sobrevive al poder destructivo del tiempo.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1596567238698-ff3981c9a153?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 14,
+    name: {
+      en: "Temperance",
+      es: "La Templanza",
+    },
+    number: 14,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Balance", "Moderation", "Patience", "Harmony", "Purpose"],
+        reversed: ["Imbalance", "Excess", "Impatience", "Lack of vision", "Recklessness"],
+      },
+      es: {
+        upright: ["Equilibrio", "Moderación", "Paciencia", "Armonía", "Propósito"],
+        reversed: ["Desequilibrio", "Exceso", "Impaciencia", "Falta de visión", "Imprudencia"],
+      },
+    },
+    element: "Fire",
+    zodiac: "Sagittarius",
+    hebrewLetter: "Samekh",
+    path: "25",
+    description: {
+      en: "The Daughter of the Reconcilers, the Bringer-forth of Life. Beauty and Sovereignty in action. The Sun acting through Sagittarius on Venus. Hence she is also a form of Artemis as Huntress, reconciler of opposites, commingling Fire and Water, pouring the Waters of Life from vessel to vessel.",
+      es: "La Hija de los Reconciliadores, la que da Vida. La Belleza y la Soberanía en acción. El Sol actuando a través de Sagitario sobre Venus. Por lo tanto es también una forma de Artemisa como Cazadora, reconciliadora de opuestos, mezclando Fuego y Agua, vertiendo las Aguas de la Vida de una vasija a otra.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1585077017696-1cb58e86db6b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 15,
+    name: {
+      en: "The Devil",
+      es: "El Diablo",
+    },
+    number: 15,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Bondage", "Materialism", "Addiction", "Restriction", "Attachment"],
+        reversed: ["Freedom", "Release", "Detachment", "Breaking free", "Self-control"],
+      },
+      es: {
+        upright: ["Esclavitud", "Materialismo", "Adicción", "Restricción", "Apego"],
+        reversed: ["Libertad", "Liberación", "Desapego", "Liberarse", "Autocontrol"],
+      },
+    },
+    element: "Earth",
+    zodiac: "Capricorn",
+    hebrewLetter: "Ayin",
+    path: "26",
+    description: {
+      en: "The Lord of the Gates of Matter, The Child of the Forces of Time. Victory penetrating into Splendor. Venus acting through Capricorn on Mercury. This is a very troubling and deep card, suggesting materialism, the darkening of the Light, the triumph of matter over spirit, the fall of Lucifer from heaven.",
+      es: "El Señor de las Puertas de la Materia, El hijo de las Fuerzas del Tiempo. La Victoria penetrando en el Esplendor. Venus actuando a través de Capricornio sobre Mercurio. Esta es una carta muy profunda e inquietante, que sugiere materialismo, el oscurecimiento de la Luz, el triunfo de la materia sobre el espíritu, la caída de Lucifer del cielo.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1588422333078-44ad73367bcb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 16,
+    name: {
+      en: "The Tower",
+      es: "La Torre",
+    },
+    number: 16,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Sudden change", "Destruction", "Liberation", "Revelation", "Awakening"],
+        reversed: ["Disaster avoided", "Delayed disaster", "Fear of change", "Resisting change"],
+      },
+      es: {
+        upright: ["Cambio repentino", "Destrucción", "Liberación", "Revelación", "Despertar"],
+        reversed: ["Desastre evitado", "Desastre retrasado", "Miedo al cambio", "Resistencia al cambio"],
+      },
+    },
+    element: "Fire",
+    planet: "Mars",
+    hebrewLetter: "Peh",
+    path: "27",
+    description: {
+      en: "The Lord of the Hosts of the Mighty. Victory assaulting Splendor. Venus acting through Mars on Mercury. This is a card of crashes, blows and sudden catastrophes. It represents the ruin of all artificial and conventional structures. What is solid and fixed is broken up. The fall of established power or structure. Yet ruin also means the opportunity for new growth.",
+      es: "El Señor de las Huestes de los Poderosos. La Victoria asaltando al Esplendor. Venus actuando a través de Marte sobre Mercurio. Esta es una carta de choques, golpes y catástrofes repentinas. Representa la ruina de todas las estructuras artificiales y convencionales. Lo sólido y fijo se rompe. La caída del poder o la estructura establecida. Sin embargo, la ruina también significa la oportunidad para un nuevo crecimiento.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1469379728443-43b730fe2a94?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 17,
+    name: {
+      en: "The Star",
+      es: "La Estrella",
+    },
+    number: 17,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Hope", "Faith", "Inspiration", "Renewal", "Spirituality"],
+        reversed: ["Lack of faith", "Despair", "Discouragement", "Insecurity", "Disconnection"],
+      },
+      es: {
+        upright: ["Esperanza", "Fe", "Inspiración", "Renovación", "Espiritualidad"],
+        reversed: ["Falta de fe", "Desesperación", "Desánimo", "Inseguridad", "Desconexión"],
+      },
+    },
+    element: "Air",
+    zodiac: "Aquarius",
+    hebrewLetter: "Tzaddi",
+    path: "28",
+    description: {
+      en: "The Daughter of the Firmament, the Dweller between the Waters. Victory dissolving in Mercy. Venus acting through Aquarius on Jupiter. The Star is a card of tranquility, harmony and renewal. Its harmonious color schemes of blues, greens and silvers indicate the flow of life, the stream of consciousness, renewal and the mingling of heaven and earth.",
+      es: "La Hija del Firmamento. La Victoria disolviéndose en Misericordia. Venus actuando a través de Acuario sobre Júpiter. La Estrella es una carta de tranquilidad, armonía y renovación. Sus esquemas de colores armoniosos de azules, verdes y plateados indican el flujo de la vida, la corriente de la conciencia, la renovación y la mezcla del cielo y la tierra.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1556760544-154b0cd293cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 18,
+    name: {
+      en: "The Moon",
+      es: "La Luna",
+    },
+    number: 18,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Illusion", "Intuition", "Uncertainty", "Subconscious", "Dreams"],
+        reversed: ["Confusion", "Fear", "Misinterpretation", "Deception", "Anxiety"],
+      },
+      es: {
+        upright: ["Ilusión", "Intuición", "Incertidumbre", "Subconsciente", "Sueños"],
+        reversed: ["Confusión", "Miedo", "Malinterpretación", "Engaño", "Ansiedad"],
+      },
+    },
+    element: "Water",
+    zodiac: "Pisces",
+    hebrewLetter: "Qoph",
+    path: "29",
+    description: {
+      en: "The Ruler of Flux and Reflux, the Child of the Sons of the Mighty. Mercy reflected in Splendor. Jupiter acting through Pisces on Mercury. An important card dealing with the most subtle and deceiving aspects of the astral plane. It suggests a kind of borderland, a twilight realm of fluctuating tides, a crossing through waters in a bark or hazy night journey.",
+      es: "La Gobernadora del Flujo y del Reflujo. La Misericordia reflejada en el Esplendor. Júpiter actuando a través de Piscis sobre Mercurio. Una carta importante que trata con los aspectos más sutiles y engañosos del plano astral. Sugiere una especie de tierra fronteriza, un reino crepuscular de mareas fluctuantes, un cruce a través de las aguas en una barca o viaje neblinoso nocturno.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1548542537-c861661a88b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 19,
+    name: {
+      en: "The Sun",
+      es: "El Sol",
+    },
+    number: 19,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Joy", "Success", "Celebration", "Positivity", "Vitality"],
+        reversed: ["Negativity", "Depression", "Sadness", "Lack of success", "Blocked creativity"],
+      },
+      es: {
+        upright: ["Alegría", "Éxito", "Celebración", "Positividad", "Vitalidad"],
+        reversed: ["Negatividad", "Depresión", "Tristeza", "Falta de éxito", "Creatividad bloqueada"],
+      },
+    },
+    element: "Fire",
+    planet: "Sun",
+    hebrewLetter: "Resh",
+    path: "30",
+    description: {
+      en: "The Lord of the Fire of the World. Splendor in Mercy. Mercury acting through the Sun on Jupiter. A truly magnificent card showing the full manifestation of Light in perfect balance and harmony. It suggests perfect clarity of vision and the solar consciousness of the Adept, the realization of the Higher Self, the perfected ego.",
+      es: "El Señor del Fuego del Mundo. El Esplendor en la Misericordia. Mercurio actuando a través del Sol sobre Júpiter. Una carta verdaderamente magnífica que muestra la plena manifestación de la Luz en perfecto equilibrio y armonía. Sugiere una perfecta claridad de visión y la conciencia solar del Adepto, la realización del Yo Superior, el ego perfeccionado.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1533711539834-ebcf19b17faa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 20,
+    name: {
+      en: "Judgment",
+      es: "El Juicio",
+    },
+    number: 20,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Judgment", "Rebirth", "Inner calling", "Absolution", "Awakening"],
+        reversed: ["Self-doubt", "Inner critic", "Ignoring the call", "Refusal of self-examination"],
+      },
+      es: {
+        upright: ["Juicio", "Renacimiento", "Llamada interior", "Absolución", "Despertar"],
+        reversed: ["Autoduda", "Crítico interior", "Ignorar la llamada", "Rechazo del autoexamen"],
+      },
+    },
+    element: "Fire",
+    planet: "Pluto",
+    hebrewLetter: "Shin",
+    path: "31",
+    description: {
+      en: "The Spirit of the Primal Fire. Foundation in Severity. Mercury acting through Fire on Saturn. Judgment represents the awakening of the true Self, the divine spark immortal in every man, the call of the Higher Self to the personality, the summoning of the lower by the higher, of the form by the formless.",
+      es: "El Espíritu del Fuego Primordial. La Fundación en la Severidad. Mercurio actuando a través del Fuego sobre Saturno. El Juicio representa el despertar del verdadero Yo, la chispa divina inmortal en cada hombre, la llamada del Yo Superior a la personalidad, la convocatoria de lo inferior por lo superior, de la forma por lo sin forma.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1635963573478-4a0283e2e8ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 21,
+    name: {
+      en: "The World",
+      es: "El Mundo",
+    },
+    number: 21,
+    type: "major",
+    suit: null,
+    keywords: {
+      en: {
+        upright: ["Completion", "Integration", "Accomplishment", "Travel", "Fulfillment"],
+        reversed: ["Incompletion", "Stagnation", "Delay", "Lacking closure", "Shortcuts"],
+      },
+      es: {
+        upright: ["Completitud", "Integración", "Logro", "Viaje", "Realización"],
+        reversed: ["Incompletitud", "Estancamiento", "Retraso", "Falta de cierre", "Atajos"],
+      },
+    },
+    element: "Earth",
+    planet: "Saturn",
+    hebrewLetter: "Tav",
+    path: "32",
+    description: {
+      en: "The Great One of the Night of Time. Saturn acting through the Earth itself. The culmination of the whole process of manifestation, the successful completion of the cosmic plan. The glorified consciousness dancing in joy at the successful accomplishment of the Great Work. The bride, the spirit of the divine shekinah, waiting to be united with her bridegroom.",
+      es: "El Grande de la Noche del Tiempo. Saturno actuando a través de la Tierra misma. La culminación de todo el proceso de manifestación, la terminación exitosa del plan cósmico. La conciencia glorificada bailando en júbilo por la consecución exitosa de la Gran Obra. La novia, el espíritu de la divina shekinah, esperando ser unida con su novio.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1590098563181-db0c523e4e6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  
+  // WANDS (MINOR ARCANA)
+  {
+    id: 22,
+    name: {
+      en: "Ace of Wands",
+      es: "As de Bastos",
+    },
+    number: "Ace",
+    type: "minor",
+    suit: "wands",
+    keywords: {
+      en: {
+        upright: ["Creation", "Willpower", "Inspiration", "Desire", "New beginnings"],
+        reversed: ["Lack of energy", "Lack of passion", "Boredom", "Delays", "Frustration"],
+      },
+      es: {
+        upright: ["Creación", "Voluntad", "Inspiración", "Deseo", "Nuevos comienzos"],
+        reversed: ["Falta de energía", "Falta de pasión", "Aburrimiento", "Retrasos", "Frustración"],
+      },
+    },
+    element: "Fire",
+    planet: null,
+    description: {
+      en: "The Root of the Powers of Fire. The beginning of force, creativity and power. A seed of dynamic energy waiting to sprout. Represents the element of fire in its purest form - potential for growth, expansion, and passion.",
+      es: "La Raíz de los Poderes del Fuego. El comienzo de la fuerza, la creatividad y el poder. Una semilla de energía dinámica esperando brotar. Representa el elemento del fuego en su forma más pura - potencial de crecimiento, expansión y pasión.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1519475889208-0968e5438f7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 23,
+    name: {
+      en: "Two of Wands",
+      es: "Dos de Bastos",
+    },
+    number: 2,
+    type: "minor",
+    suit: "wands",
+    keywords: {
+      en: {
+        upright: ["Future planning", "Progress", "Decisions", "Discovery", "Planning"],
+        reversed: ["Fear of change", "Playing safe", "Bad planning", "Lack of planning", "Limited success"],
+      },
+      es: {
+        upright: ["Planificación futura", "Progreso", "Decisiones", "Descubrimiento", "Planificación"],
+        reversed: ["Miedo al cambio", "Jugar seguro", "Mala planificación", "Falta de planificación", "Éxito limitado"],
+      },
+    },
+    element: "Fire",
+    planet: "Mars in Aries",
+    description: {
+      en: "The Lord of Dominion. Mars in Aries - first decanate. The harmony of masculine forces, potential success, bold vision, looking outward. This card shows control over material creative forces, the ability to make decisions with clarity and confidence.",
+      es: "El Señor del Dominio. Marte en Aries - primer decanato. La armonía de las fuerzas masculinas, éxito potencial, visión audaz, mirando hacia afuera. Esta carta muestra control sobre las fuerzas creativas materiales, la capacidad de tomar decisiones con claridad y confianza.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1531051557003-5260430e9526?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 24,
+    name: {
+      en: "Three of Wands",
+      es: "Tres de Bastos",
+    },
+    number: 3,
+    type: "minor",
+    suit: "wands",
+    keywords: {
+      en: {
+        upright: ["Expansion", "Foresight", "Overseas opportunities", "Growth", "Adventure"],
+        reversed: ["Obstacles", "Delays", "Frustration", "Three steps forward, two steps back", "Lack of progress"],
+      },
+      es: {
+        upright: ["Expansión", "Previsión", "Oportunidades en el extranjero", "Crecimiento", "Aventura"],
+        reversed: ["Obstáculos", "Retrasos", "Frustración", "Tres pasos adelante, dos atrás", "Falta de progreso"],
+      },
+    },
+    element: "Fire",
+    planet: "Sun in Aries",
+    description: {
+      en: "The Lord of Established Strength. Sun in Aries - second decanate. The realization of hope, the beginning of success, opportunity. The completion of the initial creative impulse, bringing with it confidence, leadership, and the anticipation of future successes.",
+      es: "El Señor de la Fuerza Establecida. Sol en Aries - segundo decanato. La realización de la esperanza, el comienzo del éxito, la oportunidad. La completitud del impulso creativo inicial, trayendo consigo confianza, liderazgo y la anticipación de éxitos futuros.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1582469566055-cdd2a1db239b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  {
+    id: 25,
+    name: {
+      en: "Four of Wands",
+      es: "Cuatro de Bastos",
+    },
+    number: 4,
+    type: "minor",
+    suit: "wands",
+    keywords: {
+      en: {
+        upright: ["Celebration", "Harmony", "Marriage", "Home", "Community"],
+        reversed: ["Lack of support", "Transience", "Home conflicts", "Instability", "Lack of celebration"],
+      },
+      es: {
+        upright: ["Celebración", "Armonía", "Matrimonio", "Hogar", "Comunidad"],
+        reversed: ["Falta de apoyo", "Transitoriedad", "Conflictos en el hogar", "Inestabilidad", "Falta de celebración"],
+      },
+    },
+    element: "Fire",
+    planet: "Venus in Aries",
+    description: {
+      en: "The Lord of Perfected Work. Venus in Aries - third decanate. Completion, settlement, arrangement, prosperity, peace, and harmony. This card represents the fulfillment of a cycle, the celebration of achievements, and the joy of shared successes.",
+      es: "El Señor de la Obra Perfeccionada. Venus en Aries - tercer decanato. Finalización, acuerdo, arreglo, prosperidad, paz y armonía. Esta carta representa la realización de un ciclo, la celebración de logros y la alegría de los éxitos compartidos.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  
+  // Continue with more wands, and add cups, swords, and pentacles (ommitting for brevity in the code example)
+  
+  // CUPS (MINOR ARCANA) - Example entries
+  {
+    id: 36,
+    name: {
+      en: "Ace of Cups",
+      es: "As de Copas",
+    },
+    number: "Ace",
+    type: "minor",
+    suit: "cups",
+    keywords: {
+      en: {
+        upright: ["Love", "New relationships", "Compassion", "Creativity", "Emotional fulfillment"],
+        reversed: ["Emptiness", "Emotional loss", "Blocked creativity", "Lovelessness", "Emotional instability"],
+      },
+      es: {
+        upright: ["Amor", "Nuevas relaciones", "Compasión", "Creatividad", "Plenitud emocional"],
+        reversed: ["Vacío", "Pérdida emocional", "Creatividad bloqueada", "Falta de amor", "Inestabilidad emocional"],
+      },
+    },
+    element: "Water",
+    planet: null,
+    description: {
+      en: "The Root of the Powers of Water. The beginning of emotions, love and relationships. A pure receptacle for feelings, intuition, and the subconscious. It represents the element of water in its purest form - capacity for love, emotional depth, and spiritual connection.",
+      es: "La Raíz de los Poderes del Agua. El comienzo de las emociones, el amor y las relaciones. Un receptáculo puro para los sentimientos, la intuición y el subconsciente. Representa el elemento del agua en su forma más pura - capacidad de amor, profundidad emocional y conexión espiritual.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1525434280327-e525e984c542?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  
+  // SWORDS (MINOR ARCANA) - Example entries
+  {
+    id: 50,
+    name: {
+      en: "Ace of Swords",
+      es: "As de Espadas",
+    },
+    number: "Ace",
+    type: "minor",
+    suit: "swords",
+    keywords: {
+      en: {
+        upright: ["Mental clarity", "Breakthrough", "New idea", "Truth", "Insight"],
+        reversed: ["Confusion", "Brutality", "Chaos", "Tyranny", "Mental block"],
+      },
+      es: {
+        upright: ["Claridad mental", "Avance", "Nueva idea", "Verdad", "Perspicacia"],
+        reversed: ["Confusión", "Brutalidad", "Caos", "Tiranía", "Bloqueo mental"],
+      },
+    },
+    element: "Air",
+    planet: null,
+    description: {
+      en: "The Root of the Powers of Air. The beginning of mental activity, new thoughts, communication, and clarity. Represents the element of air in its purest form - intellectual power, objective thinking, and the triumph of mind over emotions.",
+      es: "La Raíz de los Poderes del Aire. El comienzo de la actividad mental, nuevos pensamientos, comunicación y claridad. Representa el elemento del aire en su forma más pura - poder intelectual, pensamiento objetivo y el triunfo de la mente sobre las emociones.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+  
+  // PENTACLES (MINOR ARCANA) - Example entries
+  {
+    id: 64,
+    name: {
+      en: "Ace of Pentacles",
+      es: "As de Oros",
+    },
+    number: "Ace",
+    type: "minor",
+    suit: "pentacles",
+    keywords: {
+      en: {
+        upright: ["New financial opportunity", "Prosperity", "Abundance", "Security", "Manifestation"],
+        reversed: ["Lost opportunity", "Lack of planning", "Missed chances", "Scarcity", "Unstable foundation"],
+      },
+      es: {
+        upright: ["Nueva oportunidad financiera", "Prosperidad", "Abundancia", "Seguridad", "Manifestación"],
+        reversed: ["Oportunidad perdida", "Falta de planificación", "Oportunidades perdidas", "Escasez", "Base inestable"],
+      },
+    },
+    element: "Earth",
+    planet: null,
+    description: {
+      en: "The Root of the Powers of Earth. The beginning of material prosperity, physical health, and tangible manifestation. Represents the element of earth in its purest form - material wealth, practical abilities, and the foundation of physical reality.",
+      es: "La Raíz de los Poderes de la Tierra. El comienzo de la prosperidad material, la salud física y la manifestación tangible. Representa el elemento de la tierra en su forma más pura - riqueza material, habilidades prácticas y la fundación de la realidad física.",
+    },
+    imageSrc: "https://images.unsplash.com/photo-1565372595781-7e39ad35fa26?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+  },
+] as TarotCard[];

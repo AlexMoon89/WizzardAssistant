@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel+Decorative:wght@400;700;900&family=IM+Fell+English+SC&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+
+  /* Grimoire specific colors */
+  --grimoire-purple: 293 60% 19%;
+  --grimoire-blue: 225 34% 22%;
+  --grimoire-gold: 44 60% 47%;
+  --grimoire-amber: 46 70% 52%;
+  --grimoire-crimson: 348 100% 47%;
+  --grimoire-teal: 180 100% 25%;
+  --grimoire-parchment: 39 60% 87%;
+  --grimoire-paper: 39 50% 81%;
+  --grimoire-dark: 0 0% 5%;
+  --grimoire-charcoal: 0 0% 20%;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-serif antialiased bg-grimoire-dark text-grimoire-parchment;
+  }
+}
+
+@layer components {
+  .bg-parchment {
+    background-image: url('https://images.unsplash.com/photo-1581337303129-c339ae7a184b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .font-display {
+    font-family: 'Cinzel Decorative', cursive;
+  }
+
+  .font-accent {
+    font-family: 'IM Fell English SC', serif;
+  }
+
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-grimoire-purple {
+    color: hsl(var(--grimoire-purple));
+  }
+
+  .text-grimoire-blue {
+    color: hsl(var(--grimoire-blue));
+  }
+
+  .text-grimoire-gold {
+    color: hsl(var(--grimoire-gold));
+  }
+
+  .text-grimoire-amber {
+    color: hsl(var(--grimoire-amber));
+  }
+
+  .text-grimoire-crimson {
+    color: hsl(var(--grimoire-crimson));
+  }
+
+  .text-grimoire-teal {
+    color: hsl(var(--grimoire-teal));
+  }
+
+  .text-grimoire-parchment {
+    color: hsl(var(--grimoire-parchment));
+  }
+
+  .text-grimoire-paper {
+    color: hsl(var(--grimoire-paper));
+  }
+
+  .text-grimoire-dark {
+    color: hsl(var(--grimoire-dark));
+  }
+
+  .text-grimoire-charcoal {
+    color: hsl(var(--grimoire-charcoal));
+  }
+
+  .bg-grimoire-purple {
+    background-color: hsl(var(--grimoire-purple));
+  }
+
+  .bg-grimoire-blue {
+    background-color: hsl(var(--grimoire-blue));
+  }
+
+  .bg-grimoire-gold {
+    background-color: hsl(var(--grimoire-gold));
+  }
+
+  .bg-grimoire-amber {
+    background-color: hsl(var(--grimoire-amber));
+  }
+
+  .bg-grimoire-crimson {
+    background-color: hsl(var(--grimoire-crimson));
+  }
+
+  .bg-grimoire-teal {
+    background-color: hsl(var(--grimoire-teal));
+  }
+
+  .bg-grimoire-parchment {
+    background-color: hsl(var(--grimoire-parchment));
+  }
+
+  .bg-grimoire-paper {
+    background-color: hsl(var(--grimoire-paper));
+  }
+
+  .bg-grimoire-dark {
+    background-color: hsl(var(--grimoire-dark));
+  }
+
+  .bg-grimoire-charcoal {
+    background-color: hsl(var(--grimoire-charcoal));
+  }
+
+  .border-grimoire-gold {
+    border-color: hsl(var(--grimoire-gold));
+  }
+
+  .border-grimoire-amber {
+    border-color: hsl(var(--grimoire-amber));
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--grimoire-paper));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--grimoire-gold));
+    border-radius: 4px;
+  }
+  
+  /* Animation Classes */
+  .card-flip {
+    perspective: 1000px;
+  }
+  .card-flip-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .card-flip:hover .card-flip-inner,
+  .card-flip.active .card-flip-inner {
+    transform: rotateY(180deg);
+  }
+  .card-flip-front, .card-flip-back {
+    backface-visibility: hidden;
+  }
+  .card-flip-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* Glow Effects */
+  .glow-effect {
+    transition: all 0.3s;
+  }
+  .glow-effect:hover, .glow-effect.active {
+    box-shadow: 0 0 10px 3px hsla(var(--grimoire-gold), 0.5);
+  }
+  
+  /* Seal Animation */
+  @keyframes sealPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  .seal-button:hover {
+    animation: sealPulse 1.2s infinite ease-in-out;
+  }
+  
+  /* Tab animations */
+  .tab-content {
+    transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .tab-hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+  }
+  
+  /* Mystical fade in */
+  @keyframes mysticalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  .mystical-fade-in {
+    animation: mysticalFadeIn 0.6s forwards;
+  }
+}

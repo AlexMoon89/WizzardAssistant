@@ -1,0 +1,258 @@
+[
+  {
+    "id": "puer",
+    "symbol": "♂",
+    "zodiac": "♈",
+    "planet": "Mars",
+    "element": "Fire",
+    "type": "subjective",
+    "name": {
+      "en": "Puer",
+      "es": "Puer"
+    },
+    "description": {
+      "en": "Aggression, action, warlike, young masculine energy.",
+      "es": "Agresión, acción, guerrero, energía masculina joven."
+    }
+  },
+  {
+    "id": "puella",
+    "symbol": "♀",
+    "zodiac": "♎",
+    "planet": "Venus",
+    "element": "Water",
+    "type": "subjective",
+    "name": {
+      "en": "Puella",
+      "es": "Puella"
+    },
+    "description": {
+      "en": "Beauty, grace, harmony, young feminine energy.",
+      "es": "Belleza, gracia, armonía, energía femenina joven."
+    }
+  },
+  {
+    "id": "fortuna_major",
+    "symbol": "☉",
+    "zodiac": "♌",
+    "planet": "Sun",
+    "element": "Fire",
+    "type": "objective",
+    "name": {
+      "en": "Fortuna Major",
+      "es": "Fortuna Mayor"
+    },
+    "description": {
+      "en": "Strong success, gain through one's own effort.",
+      "es": "Éxito fuerte, ganancia a través del propio esfuerzo."
+    }
+  },
+  {
+    "id": "fortuna_minor",
+    "symbol": "☉",
+    "zodiac": "♌",
+    "planet": "Sun",
+    "element": "Fire",
+    "type": "objective",
+    "name": {
+      "en": "Fortuna Minor",
+      "es": "Fortuna Menor"
+    },
+    "description": {
+      "en": "Lesser success, temporary advantage or aid.",
+      "es": "Éxito menor, ventaja temporal o ayuda externa."
+    }
+  },
+  {
+    "id": "acquisitio",
+    "symbol": "♃",
+    "zodiac": "♐",
+    "planet": "Jupiter",
+    "element": "Air",
+    "type": "objective",
+    "name": {
+      "en": "Acquisitio",
+      "es": "Adquisitio"
+    },
+    "description": {
+      "en": "Gain, acquisition, growth and prosperity.",
+      "es": "Ganancia, adquisición, crecimiento y prosperidad."
+    }
+  },
+  {
+    "id": "amissio",
+    "symbol": "♀",
+    "zodiac": "♉",
+    "planet": "Venus",
+    "element": "Earth",
+    "type": "objective",
+    "name": {
+      "en": "Amissio",
+      "es": "Amissio"
+    },
+    "description": {
+      "en": "Loss, letting go, releasing attachments.",
+      "es": "Pérdida, soltar, dejar ir los apegos."
+    }
+  },
+  {
+    "id": "conjunctio",
+    "symbol": "☿",
+    "zodiac": "♍",
+    "planet": "Mercury",
+    "element": "Air",
+    "type": "objective",
+    "name": {
+      "en": "Conjunctio",
+      "es": "Conjunctio"
+    },
+    "description": {
+      "en": "Union, coming together, meetings and communications.",
+      "es": "Unión, encuentro, comunicación."
+    }
+  },
+  {
+    "id": "carcer",
+    "symbol": "♄",
+    "zodiac": "♑",
+    "planet": "Saturn",
+    "element": "Earth",
+    "type": "objective",
+    "name": {
+      "en": "Carcer",
+      "es": "Cárcer"
+    },
+    "description": {
+      "en": "Imprisonment, restriction, obstacles.",
+      "es": "Prisión, restricción, obstáculos."
+    }
+  },
+  {
+    "id": "albus",
+    "symbol": "☿",
+    "zodiac": "♊",
+    "planet": "Mercury",
+    "element": "Air",
+    "type": "subjective",
+    "name": {
+      "en": "Albus",
+      "es": "Albus"
+    },
+    "description": {
+      "en": "Wisdom, clarity, calm reflection.",
+      "es": "Sabiduría, claridad, reflexión calma."
+    }
+  },
+  {
+    "id": "rubeus",
+    "symbol": "♂",
+    "zodiac": "♏",
+    "planet": "Mars",
+    "element": "Water",
+    "type": "subjective",
+    "name": {
+      "en": "Rubeus",
+      "es": "Rubeus"
+    },
+    "description": {
+      "en": "Violence, chaos, passion, danger.",
+      "es": "Violencia, caos, pasión, peligro."
+    }
+  },
+  {
+    "id": "laetitia",
+    "symbol": "♃",
+    "zodiac": "♓",
+    "planet": "Jupiter",
+    "element": "Water",
+    "type": "subjective",
+    "name": {
+      "en": "Laetitia",
+      "es": "Laetitia"
+    },
+    "description": {
+      "en": "Joy, happiness, hope and celebration.",
+      "es": "Alegría, felicidad, esperanza y celebración."
+    }
+  },
+  {
+    "id": "tristitia",
+    "symbol": "♄",
+    "zodiac": "♒",
+    "planet": "Saturn",
+    "element": "Earth",
+    "type": "subjective",
+    "name": {
+      "en": "Tristitia",
+      "es": "Tristitia"
+    },
+    "description": {
+      "en": "Sadness, sorrow, limitation and heaviness.",
+      "es": "Tristeza, dolor, limitación y pesadez."
+    }
+  },
+  {
+    "id": "populus",
+    "symbol": "☽",
+    "zodiac": "♋",
+    "planet": "Moon",
+    "element": "Water",
+    "type": "objective",
+    "name": {
+      "en": "Populus",
+      "es": "Populus"
+    },
+    "description": {
+      "en": "The crowd, multiplicity, adaptability.",
+      "es": "La multitud, multiplicidad, adaptabilidad."
+    }
+  },
+  {
+    "id": "via",
+    "symbol": "☽",
+    "zodiac": "♋",
+    "planet": "Moon",
+    "element": "Water",
+    "type": "objective",
+    "name": {
+      "en": "Via",
+      "es": "Vía"
+    },
+    "description": {
+      "en": "The way, journey, movement, transition.",
+      "es": "El camino, viaje, movimiento, transición."
+    }
+  },
+  {
+    "id": "cauda_draconis",
+    "symbol": "♂",
+    "zodiac": "",
+    "planet": "South Node",
+    "element": "Fire",
+    "type": "subjective",
+    "name": {
+      "en": "Cauda Draconis",
+      "es": "Cauda Draconis"
+    },
+    "description": {
+      "en": "Endings, karma, destructive transformation.",
+      "es": "Finales, karma, transformación destructiva."
+    }
+  },
+  {
+    "id": "caput_draconis",
+    "symbol": "♀",
+    "zodiac": "",
+    "planet": "North Node",
+    "element": "Air",
+    "type": "subjective",
+    "name": {
+      "en": "Caput Draconis",
+      "es": "Caput Draconis"
+    },
+    "description": {
+      "en": "Beginnings, potential, spiritual purpose.",
+      "es": "Comienzos, potencial, propósito espiritual."
+    }
+  }
+]
