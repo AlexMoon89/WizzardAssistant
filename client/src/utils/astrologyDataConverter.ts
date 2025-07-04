@@ -80,13 +80,95 @@ function extractHouseNumber(houseString: string): HouseNumber {
   return 1;
 }
 
-function extractDignityAndDecan(dignityDecanString: string): { dignity?: Dignity, decan?: Decan, decanRuler?: string } {
-  if (!dignityDecanString) return {};
+// Traditional planetary dignities lookup
+function getTraditionalDignity(planet: Planet, sign: ZodiacSign): Dignity | undefined {
+  const dignities: Record<Planet, { domicile: ZodiacSign[], exaltation: ZodiacSign[], detriment: ZodiacSign[], fall: ZodiacSign[] }> = {
+    sun: {
+      domicile: ['leo'],
+      exaltation: ['aries'],
+      detriment: ['aquarius'],
+      fall: ['libra']
+    },
+    moon: {
+      domicile: ['cancer'],
+      exaltation: ['taurus'],
+      detriment: ['capricorn'],
+      fall: ['scorpio']
+    },
+    mercury: {
+      domicile: ['gemini', 'virgo'],
+      exaltation: ['virgo'],
+      detriment: ['sagittarius', 'pisces'],
+      fall: ['pisces']
+    },
+    venus: {
+      domicile: ['taurus', 'libra'],
+      exaltation: ['pisces'],
+      detriment: ['scorpio', 'aries'],
+      fall: ['virgo']
+    },
+    mars: {
+      domicile: ['aries', 'scorpio'],
+      exaltation: ['capricorn'],
+      detriment: ['libra', 'taurus'],
+      fall: ['cancer']
+    },
+    jupiter: {
+      domicile: ['sagittarius', 'pisces'],
+      exaltation: ['cancer'],
+      detriment: ['gemini', 'virgo'],
+      fall: ['capricorn']
+    },
+    saturn: {
+      domicile: ['capricorn', 'aquarius'],
+      exaltation: ['libra'],
+      detriment: ['cancer', 'leo'],
+      fall: ['aries']
+    },
+    uranus: { domicile: ['aquarius'], exaltation: [], detriment: ['leo'], fall: [] },
+    neptune: { domicile: ['pisces'], exaltation: [], detriment: ['virgo'], fall: [] },
+    pluto: { domicile: ['scorpio'], exaltation: [], detriment: ['taurus'], fall: [] }
+  };
+
+  const planetDignities = dignities[planet];
+  if (!planetDignities) return undefined;
+
+  if (planetDignities.domicile.includes(sign)) return 'domicile';
+  if (planetDignities.exaltation.includes(sign)) return 'exaltation';
+  if (planetDignities.detriment.includes(sign)) return 'detriment';
+  if (planetDignities.fall.includes(sign)) return 'fall';
   
+  return undefined;
+}
+
+function extractDignityAndDecan(dignityDecanString: string, planet?: Planet, sign?: ZodiacSign, notes?: string): { dignity?: Dignity, decan?: Decan, decanRuler?: string } {
   const result: { dignity?: Dignity, decan?: Decan, decanRuler?: string } = {};
   
   // Debug
   console.log('Extracting from dignity string:', dignityDecanString);
+  
+  // First, try to get traditional dignity if we have planet and sign
+  if (planet && sign) {
+    const traditionalDignity = getTraditionalDignity(planet, sign);
+    if (traditionalDignity) {
+      result.dignity = traditionalDignity;
+    }
+  }
+  
+  // Check notes for dignity information
+  if (notes) {
+    if (notes.toLowerCase().includes('domicile') || notes.toLowerCase().includes('rulership')) {
+      result.dignity = 'domicile';
+    } else if (notes.toLowerCase().includes('exaltation') || notes.toLowerCase().includes('exalted')) {
+      result.dignity = 'exaltation';
+    } else if (notes.toLowerCase().includes('detriment')) {
+      result.dignity = 'detriment';
+    } else if (notes.toLowerCase().includes('fall')) {
+      result.dignity = 'fall';
+    }
+  }
+  
+  if (!dignityDecanString) return result;
   
   // Check if this is a decan format like "Decan: Mars (Domicile) - Tarot: 2 of Wands (Dominion)"
   if (dignityDecanString.includes('Decan:')) {
@@ -304,7 +386,8 @@ export function convertRawDataToInterpretations(rawData: any[]): AstrologyInterp
     
     // Extract dignity, decan, and decan ruler if available
     const { dignity, decan, decanRuler } = entry['Dignity/Decan'] ? 
-      extractDignityAndDecan(entry['Dignity/Decan']) : {};
+      extractDignityAndDecan(entry['Dignity/Decan'], currentPlanet as Planet, currentSign as ZodiacSign, entry.Notes) : 
+      extractDignityAndDecan('', currentPlanet as Planet, currentSign as ZodiacSign, entry.Notes);
     
     // Process keywords - handle both comma-separated strings and arrays
     let positiveKeywords: string[] = [];

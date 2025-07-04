@@ -1,8 +1,9 @@
-
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { zodiacSigns, planets, astroHouses } from '@/data/astrology';
 import AstrologyModal from './AstrologyModal';
+import ZodiacImage from './ZodiacImage';
+import { ZodiacSign } from '@/types';
 
 interface AstrologyReferenceProps {
   openSection: string | null;
@@ -53,8 +54,11 @@ const AstrologyReference: React.FC<AstrologyReferenceProps> = ({
                       className="bg-grimoire-blue bg-opacity-50 p-3 rounded border border-grimoire-gold cursor-pointer hover:bg-opacity-70 transition-all"
                       onClick={() => handleItemClick('zodiac', sign)}
                     >
-                      <h4 className="font-accent text-grimoire-amber">
-                        {sign.symbol} {sign.name[language]}
+                      <h4 className="font-accent text-grimoire-amber flex items-center gap-2">
+                        <span className="w-6 h-6 inline-flex items-center justify-center">
+                          <ZodiacImage sign={sign.id as ZodiacSign} size="small" altText={sign.name[language]} />
+                        </span>
+                        {sign.name[language]}
                       </h4>
                       <p className="text-sm mt-1">
                         {t('astrology', 'elements', sign.element)}, {t('astrology', 'modalities', sign.modality)}

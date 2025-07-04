@@ -1,4 +1,6 @@
 import { AstrologyHouse, AstrologyPlanet, AstrologySign, AstrologyInterpretation } from "@/types";
+import { convertRawDataToInterpretations } from "@/utils/astrologyDataConverter";
+import rawInterpretationsData from "./astrologyInterpretationsRaw.json";
 
 // Elements
 export const elements = {
@@ -461,6 +463,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Sol",
     },
     symbol: "☉",
+    imageUrl: "sun.jpg",
     keywords: {
       en: ["Identity", "Ego", "Vitality", "Leadership", "Purpose", "Individuality"],
       es: ["Identidad", "Ego", "Vitalidad", "Liderazgo", "Propósito", "Individualidad"],
@@ -477,6 +480,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Luna",
     },
     symbol: "☽",
+    imageUrl: "moon.jpg",
     keywords: {
       en: ["Emotions", "Instincts", "Nurturing", "Receptivity", "Cycles", "Inner child"],
       es: ["Emociones", "Instintos", "Nutrición", "Receptividad", "Ciclos", "Niño interior"],
@@ -493,6 +497,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Mercurio",
     },
     symbol: "☿",
+    imageUrl: "mercury.jpg",
     keywords: {
       en: ["Communication", "Intellect", "Analysis", "Learning", "Travel", "Skills"],
       es: ["Comunicación", "Intelecto", "Análisis", "Aprendizaje", "Viajes", "Destrezas"],
@@ -509,6 +514,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Venus",
     },
     symbol: "♀",
+    imageUrl: "venus.jpg",
     keywords: {
       en: ["Love", "Beauty", "Harmony", "Attraction", "Art", "Relationships"],
       es: ["Amor", "Belleza", "Armonía", "Atracción", "Arte", "Relaciones"],
@@ -525,6 +531,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Marte",
     },
     symbol: "♂",
+    imageUrl: "mars.jpg",
     keywords: {
       en: ["Action", "Energy", "Passion", "Courage", "Aggression", "Desire"],
       es: ["Acción", "Energía", "Pasión", "Coraje", "Agresión", "Deseo"],
@@ -541,6 +548,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Júpiter",
     },
     symbol: "♃",
+    imageUrl: "jupiter.jpg",
     keywords: {
       en: ["Expansion", "Growth", "Abundance", "Optimism", "Philosophy", "Wisdom"],
       es: ["Expansión", "Crecimiento", "Abundancia", "Optimismo", "Filosofía", "Sabiduría"],
@@ -557,6 +565,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Saturno",
     },
     symbol: "♄",
+    imageUrl: "saturn.jpg",
     keywords: {
       en: ["Structure", "Discipline", "Limitation", "Responsibility", "Time", "Maturity"],
       es: ["Estructura", "Disciplina", "Limitación", "Responsabilidad", "Tiempo", "Madurez"],
@@ -573,6 +582,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Urano",
     },
     symbol: "♅",
+    imageUrl: "uranus.jpg",
     keywords: {
       en: ["Freedom", "Revolution", "Innovation", "Sudden change", "Originality", "Technology"],
       es: ["Libertad", "Revolución", "Innovación", "Cambio repentino", "Originalidad", "Tecnología"],
@@ -589,6 +599,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Neptuno",
     },
     symbol: "♆",
+    imageUrl: "neptune.jpg",
     keywords: {
       en: ["Spirituality", "Dreams", "Illusion", "Inspiration", "Intuition", "Mysticism"],
       es: ["Espiritualidad", "Sueños", "Ilusión", "Inspiración", "Intuición", "Misticismo"],
@@ -605,6 +616,7 @@ export const planets: AstrologyPlanet[] = [
       es: "Plutón",
     },
     symbol: "♇",
+    imageUrl: "pluto.jpg",
     keywords: {
       en: ["Transformation", "Power", "Death", "Rebirth", "Obsession", "Control"],
       es: ["Transformación", "Poder", "Muerte", "Renacimiento", "Obsesión", "Control"],
@@ -616,8 +628,11 @@ export const planets: AstrologyPlanet[] = [
   },
 ];
 
-// Planet-Sign-House Interpretations
+// Combined interpretations - both original and new format from JSON data
 export const interpretations: AstrologyInterpretation[] = [
+  ...convertRawDataToInterpretations(rawInterpretationsData as any[]),
+  
+  // Keep original sample interpretations as fallbacks
   {
     planet: "sun",
     sign: "aries",
@@ -631,6 +646,7 @@ export const interpretations: AstrologyInterpretation[] = [
     planet: "moon",
     sign: "cancer",
     house: 4,
+    dignity: "domicile",
     interpretation: {
       en: "With the Moon in its home sign of Cancer in the 4th House of home and family, you experience a powerful emotional connection to your roots, ancestry, and domestic life. Your sense of security is deeply tied to family bonds and creating a nurturing home environment. You may be highly intuitive about the emotional needs of family members and have a natural talent for creating spaces that feel emotionally safe and comforting.",
       es: "Con la Luna en su signo hogar de Cáncer en la Casa 4 de hogar y familia, experimentas una poderosa conexión emocional con tus raíces, ancestros y vida doméstica. Tu sentido de seguridad está profundamente ligado a los lazos familiares y a crear un ambiente hogareño nutritivo. Puedes ser altamente intuitivo sobre las necesidades emocionales de los miembros de tu familia y tener un talento natural para crear espacios que se sientan emocionalmente seguros y reconfortantes.",

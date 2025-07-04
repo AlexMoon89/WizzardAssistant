@@ -22,6 +22,10 @@ export function shuffleArray<T>(array: T[]): T[] {
   return newArray;
 }
 
+export function capitalizeFirstLetter(str: string): string { 
+  if (!str) return ''; 
+  return str.charAt(0).toUpperCase() + str.slice(1); }
+
 // Function to preload images to ensure they're cached
 export function preloadImage(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
