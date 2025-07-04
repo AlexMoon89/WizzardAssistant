@@ -97,6 +97,7 @@ export interface AstrologyPlanet {
     es: string;
   };
   symbol: string;
+  imageUrl?: string; // Optional image URL for the planet
   keywords: {
     en: string[];
     es: string[];
@@ -107,10 +108,25 @@ export interface AstrologyPlanet {
   };
 }
 
+export type Decan = 1 | 2 | 3;
+export type Dignity = 'domicile' | 'exaltation' | 'detriment' | 'fall' | 'neutral' | 'peregrine';
+
 export interface AstrologyInterpretation {
   planet: Planet;
   sign: ZodiacSign;
   house: HouseNumber;
+  decan?: Decan;
+  decanRuler?: string; // The planet ruling this decan (e.g., "mars", "venus")
+  dignity?: Dignity;
+  tarotCorrespondence?: string; // References to Tarot cards like "2 of Wands (Dominion)"
+  positiveAspects?: {
+    en: string[];
+    es: string[];
+  };
+  negativeAspects?: {
+    en: string[];
+    es: string[];
+  };
   interpretation: {
     en: string;
     es: string;
@@ -144,6 +160,43 @@ export interface GeomancyFigure {
 }
 
 // General site translation interface
+export interface TarotSpreadPosition {
+  id: number;
+  name: {
+    en: string;
+    es: string;
+  };
+  description: {
+    en: string;
+    es: string;
+  };
+  element: Element | 'spirit';
+}
+
+export interface TarotSpread {
+  id: string;
+  name: {
+    en: string;
+    es: string;
+  };
+  description: {
+    en: string;
+    es: string;
+  };
+  positions: TarotSpreadPosition[];
+  layout: string; // Path to the layout image
+}
+
+export interface TarotReading {
+  spreadId: string;
+  cards: Array<{
+    position: number;
+    card: TarotCard;
+    isReversed: boolean;
+  }>;
+  date: Date;
+}
+
 export interface SiteTranslations {
   header: {
     title: string;
@@ -153,6 +206,7 @@ export interface SiteTranslations {
     tarot: string;
     astrology: string;
     geomancy: string;
+    planetaryHours: string;
   };
   tarot: {
     title: string;
@@ -164,6 +218,20 @@ export interface SiteTranslations {
     element: string;
     planet: string;
     zodiac: string;
+    keywords: string;
+    spreads: {
+      title: string;
+      subtitle: string;
+      selectSpread: string;
+      threeCardSpread: string;
+      crossSpread: string;
+      drawCards: string;
+      position: string;
+      interpretation: string;
+      saveReading: string;
+      newReading: string;
+      elementMeaning: string;
+    };
   };
   astrology: {
     title: string;
@@ -174,7 +242,25 @@ export interface SiteTranslations {
       planet: string;
       sign: string;
       house: string;
+      decan: string;
+      dignity: string;
+      positiveAspects: string;
+      negativeAspects: string;
+      notes: string;
       interpretButton: string;
+    },
+    dignities: {
+      domicile: string;
+      exaltation: string;
+      detriment: string;
+      fall: string;
+      neutral: string;
+      peregrine: string;
+    },
+    decans: {
+      title: string;
+      explanation: string;
+      planetaryRuler: string;
     },
     reference: {
       zodiac: string;
@@ -205,5 +291,67 @@ export interface SiteTranslations {
   footer: {
     text: string;
     subtext: string;
+  };
+  planetaryHours: {
+    title: string;
+    subtitle: string;
+    currentTime: string;
+    location: string;
+    dayRuler: string;
+    hourRuler: string;
+    hourNumber: string;
+    tattvicTide: string;
+    sunPosition: string;
+    moonPosition: string;
+    moonPhase: string;
+    ascendant: string;
+    midheaven: string;
+    getLocation: string;
+    calculating: string;
+  };
+}
+
+// Planetary Hours types
+export interface PlanetaryHoursInput {
+  latitude: number;
+  longitude: number;
+  datetime?: string; // optional ISO string, defaults to now
+  date?: Date; // optional Date object, defaults to now
+  language?: Language; // optional, for translation support
+}
+
+export interface TattvicTide {
+  name: string;           // e.g. "akasha"
+  icon: string;           // e.g. "/assets/tattvic-tides/akasha.png"
+  color: string;          // e.g. "#000000"
+  label: string;          // e.g. "Akasha" or "Éter"
+}
+
+export interface ZodiacPosition {
+  degrees: number;
+  minutes: number;
+  sign: string;
+  formatted: string;
+}
+
+export interface PlanetaryHoursData {
+  datetime: string;
+  location: {
+    latitude: number;
+    longitude: number;
+    timezone: string;
+  };
+  planetaryHour: {
+    dayRuler: string;       // e.g. "Sun" or "Sol"
+    hourRuler: string;      // e.g. "Venus" or "Venus"
+    hourNumber: number;     // 1–24
+  };
+  tattvicTide: TattvicTide;
+  astrology: {
+    sunPosition: ZodiacPosition;
+    moonPosition: ZodiacPosition;
+    moonPhase: string;      // e.g. "Full Moon" or "Luna Llena"
+    ascendant: ZodiacPosition;
+    midheaven: ZodiacPosition;
   };
 }

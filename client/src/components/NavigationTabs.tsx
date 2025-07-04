@@ -25,6 +25,11 @@ const NavigationTabs: React.FC<NavigationTabsProps> = ({ activeTab, setActiveTab
       id: 'geomancy', 
       imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ghoreh_001.JPG/1200px-Ghoreh_001.JPG',
       color: 'bg-grimoire-blue' 
+    },
+    { 
+      id: 'planetaryHours', 
+      imageSrc: 'https://i.pinimg.com/736x/ab/ff/51/abff51c3b04c0036f4507d458ad08209.jpg',
+      color: 'bg-grimoire-gold' 
     }
   ];
 

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import TarotSection from '@/components/tarot/TarotSection';
 import AstrologySection from '@/components/astrology/AstrologySection';
 import GeomancySection from '@/components/geomancy/GeomancySection';
+import PlanetaryHours from '@/components/planetary/PlanetaryHours';
 import { isOffline } from '@/lib/utils';
 
 const Home: React.FC = () => {
@@ -54,6 +55,9 @@ const Home: React.FC = () => {
 
           {/* Geomancy Tab Content */}
           {activeTab === 'geomancy' && <GeomancySection />}
+
+          {/* Planetary Hours Tab Content */}
+          {activeTab === 'planetaryHours' && <PlanetaryHours />}
         </main>
 
         <Footer />

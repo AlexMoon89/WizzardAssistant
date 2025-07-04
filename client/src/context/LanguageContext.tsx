@@ -6,7 +6,7 @@ import translations from '@/data/translations';
 interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: (section: keyof typeof translations.en, key: string, nestedKey?: string) => string;
+  t: (section: keyof typeof translations.en, key: string, nestedKey?: string) => any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -19,7 +19,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const [language, setLanguage] = useLocalStorage<Language>('language', 'en');
 
   // Translation function that navigates the nested structure
-  const t = (section: keyof typeof translations.en, key: string, nestedKey?: string): string => {
+  const t = (section: keyof typeof translations.en, key: string, nestedKey?: string): any => {
     try {
       const sectionObj = translations[language][section] as any;
       

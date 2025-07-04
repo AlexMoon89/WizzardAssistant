@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import TarotCard from './TarotCard';
+import TarotSpreads from './TarotSpreads';
 import tarotCards from '@/data/tarot';
 import { useLanguage } from '@/context/LanguageContext';
 import { shuffleArray } from '@/lib/utils';
@@ -9,6 +10,7 @@ const TarotSection: React.FC = () => {
   const { t, language } = useLanguage();
   const [displayedCards, setDisplayedCards] = useState(tarotCards);
   const [activeFilter, setActiveFilter] = useState<'all' | 'major' | 'minor' | 'wands' | 'cups' | 'swords' | 'pentacles'>('all');
+  const [activeView, setActiveView] = useState<'cards' | 'spreads'>('cards');
   
   // Filter cards based on the selected category
   const filterCards = (filterType: typeof activeFilter) => {
@@ -174,7 +176,7 @@ const TarotSection: React.FC = () => {
         title = language === 'en' ? 'Suit of Swords' : 'Palo de Espadas';
         break;
       case 'pentacles':
-        title = language === 'en' ? 'Suit of Pentacles' : 'Palo de Oros';
+        title = language === 'en' ? 'Suit of Pentacles' : 'Palo de Pentáculos';
         break;
     }
     
@@ -203,92 +205,122 @@ const TarotSection: React.FC = () => {
         </p>
       </div>
       
-      {/* Filter Tabs */}
-      <div className="mb-8 flex flex-wrap gap-2">
-        <button 
-          onClick={() => filterCards('all')}
-          className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
-            activeFilter === 'all'
-              ? 'bg-grimoire-gold text-grimoire-dark'
-              : 'bg-grimoire-dark/60 text-grimoire-gold border border-grimoire-gold/50 hover:bg-grimoire-dark'
-          }`}
-        >
-          {language === 'en' ? 'All Cards' : 'Todas las Cartas'}
-        </button>
-        <button 
-          onClick={() => filterCards('major')}
-          className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
-            activeFilter === 'major'
-              ? 'bg-grimoire-gold text-grimoire-dark'
-              : 'bg-grimoire-dark/60 text-grimoire-gold border border-grimoire-gold/50 hover:bg-grimoire-dark'
-          }`}
-        >
-          {language === 'en' ? 'Major Arcana' : 'Arcanos Mayores'}
-        </button>
-        <button 
-          onClick={() => filterCards('minor')}
-          className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
-            activeFilter === 'minor'
-              ? 'bg-grimoire-gold text-grimoire-dark'
-              : 'bg-grimoire-dark/60 text-grimoire-gold border border-grimoire-gold/50 hover:bg-grimoire-dark'
-          }`}
-        >
-          {language === 'en' ? 'Minor Arcana' : 'Arcanos Menores'}
-        </button>
-        <button 
-          onClick={() => filterCards('wands')}
-          className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
-            activeFilter === 'wands'
+      {/* View Selector Tabs */}
+      <div className="mb-8 flex justify-center gap-4">
+        <button
+          onClick={() => setActiveView('cards')}
+          className={`px-6 py-3 rounded-md font-display text-lg tracking-wider transition-colors ${
+            activeView === 'cards'
               ? 'bg-grimoire-amber text-grimoire-dark'
               : 'bg-grimoire-dark/60 text-grimoire-amber border border-grimoire-amber/50 hover:bg-grimoire-dark'
           }`}
         >
-          {language === 'en' ? 'Wands' : 'Bastos'}
+          {language === 'en' ? 'Card Library' : 'Biblioteca de Cartas'}
         </button>
-        <button 
-          onClick={() => filterCards('cups')}
-          className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
-            activeFilter === 'cups'
-              ? 'bg-grimoire-teal text-grimoire-dark'
-              : 'bg-grimoire-dark/60 text-grimoire-teal border border-grimoire-teal/50 hover:bg-grimoire-dark'
-          }`}
-        >
-          {language === 'en' ? 'Cups' : 'Copas'}
-        </button>
-        <button 
-          onClick={() => filterCards('swords')}
-          className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
-            activeFilter === 'swords'
+        <button
+          onClick={() => setActiveView('spreads')}
+          className={`px-6 py-3 rounded-md font-display text-lg tracking-wider transition-colors ${
+            activeView === 'spreads'
               ? 'bg-grimoire-purple text-white'
               : 'bg-grimoire-dark/60 text-grimoire-parchment border border-grimoire-purple/50 hover:bg-grimoire-dark'
           }`}
         >
-          {language === 'en' ? 'Swords' : 'Espadas'}
-        </button>
-        <button 
-          onClick={() => filterCards('pentacles')}
-          className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
-            activeFilter === 'pentacles'
-              ? 'bg-grimoire-crimson text-white'
-              : 'bg-grimoire-dark/60 text-grimoire-crimson border border-grimoire-crimson/50 hover:bg-grimoire-dark'
-          }`}
-        >
-          {language === 'en' ? 'Pentacles' : 'Oros'}
+          {language === 'en' ? 'Tarot Spreads' : 'Tiradas de Tarot'}
         </button>
       </div>
       
-      {/* Cards display - either grouped or filtered */}
-      {activeFilter === 'all' ? renderGroupedCards() : renderFilteredCards()}
-      
-      {/* Random Draw Button */}
-      <div className="mt-12 text-center">
-        <button 
-          onClick={handleDrawCard}
-          className="px-8 py-3 bg-grimoire-purple border-2 border-grimoire-gold rounded-md font-accent tracking-wider text-grimoire-gold hover:bg-grimoire-blue transition-all duration-300"
-        >
-          <i className="fas fa-hand-sparkles mr-2"></i> {t('tarot', 'drawButton')}
-        </button>
-      </div>
+      {activeView === 'cards' ? (
+        <>
+          {/* Filter Tabs */}
+          <div className="mb-8 flex flex-wrap gap-2">
+            <button 
+              onClick={() => filterCards('all')}
+              className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
+                activeFilter === 'all'
+                  ? 'bg-grimoire-gold text-grimoire-dark'
+                  : 'bg-grimoire-dark/60 text-grimoire-gold border border-grimoire-gold/50 hover:bg-grimoire-dark'
+              }`}
+            >
+              {language === 'en' ? 'All Cards' : 'Todas las Cartas'}
+            </button>
+            <button 
+              onClick={() => filterCards('major')}
+              className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
+                activeFilter === 'major'
+                  ? 'bg-grimoire-gold text-grimoire-dark'
+                  : 'bg-grimoire-dark/60 text-grimoire-gold border border-grimoire-gold/50 hover:bg-grimoire-dark'
+              }`}
+            >
+              {language === 'en' ? 'Major Arcana' : 'Arcanos Mayores'}
+            </button>
+            <button 
+              onClick={() => filterCards('minor')}
+              className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
+                activeFilter === 'minor'
+                  ? 'bg-grimoire-gold text-grimoire-dark'
+                  : 'bg-grimoire-dark/60 text-grimoire-gold border border-grimoire-gold/50 hover:bg-grimoire-dark'
+              }`}
+            >
+              {language === 'en' ? 'Minor Arcana' : 'Arcanos Menores'}
+            </button>
+            <button 
+              onClick={() => filterCards('wands')}
+              className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
+                activeFilter === 'wands'
+                  ? 'bg-grimoire-crimson text-grimoire-dark'
+                  : 'bg-grimoire-dark/60 text-grimoire-crimson border border-grimoire-amber/50 hover:bg-grimoire-dark'
+              }`}
+            >
+              {language === 'en' ? 'Wands' : 'Bastos'}
+            </button>
+            <button 
+              onClick={() => filterCards('cups')}
+              className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
+                activeFilter === 'cups'
+                  ? 'bg-grimoire-teal text-grimoire-dark'
+                  : 'bg-grimoire-dark/60 text-grimoire-teal border border-grimoire-teal/50 hover:bg-grimoire-dark'
+              }`}
+            >
+              {language === 'en' ? 'Cups' : 'Copas'}
+            </button>
+            <button 
+              onClick={() => filterCards('swords')}
+              className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
+                activeFilter === 'swords'
+                  ? 'bg-grimoire-purple text-white'
+                  : 'bg-grimoire-dark/60 text-grimoire-parchment border border-grimoire-purple/50 hover:bg-grimoire-dark'
+              }`}
+            >
+              {language === 'en' ? 'Swords' : 'Espadas'}
+            </button>
+            <button 
+              onClick={() => filterCards('pentacles')}
+              className={`px-4 py-2 rounded-md font-accent tracking-wider transition-colors ${
+                activeFilter === 'pentacles'
+                  ? 'bg-grimoire-gold text-white'
+                  : 'bg-grimoire-dark/60 text-grimoire-gold border border-grimoire-gold/50 hover:bg-grimoire-dark'
+              }`}
+            >
+              {language === 'en' ? 'Pentacles' : 'Pentáculos'}
+            </button>
+          </div>
+          
+          {/* Cards display - either grouped or filtered */}
+          {activeFilter === 'all' ? renderGroupedCards() : renderFilteredCards()}
+          
+          {/* Random Draw Button */}
+          <div className="mt-12 text-center">
+            <button 
+              onClick={handleDrawCard}
+              className="px-8 py-3 bg-grimoire-purple border-2 border-grimoire-gold rounded-md font-accent tracking-wider text-grimoire-gold hover:bg-grimoire-blue transition-all duration-300"
+            >
+              <i className="fas fa-hand-sparkles mr-2"></i> {t('tarot', 'drawButton')}
+            </button>
+          </div>
+        </>
+      ) : (
+        <TarotSpreads />
+      )}
     </section>
   );
 };
