@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -49,8 +48,17 @@ const NavigationTabs: React.FC<NavigationTabsProps> = ({ activeTab, setActiveTab
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <span className="font-accent text-sm md:text-base mt-2">
-              {t('navigation', tab.id)}
+            <span className="font-accent text-sm md:text-base mt-2 text-center">
+              {tab.id === 'planetaryHours'
+                ? t('navigation', tab.id).split(' ').map((word: string, i: number, arr: string[]) =>
+                    i === arr.length - 1
+                      ? <React.Fragment key={i}>{word}</React.Fragment>
+                      : i === 0
+                        ? <React.Fragment key={i}>{word}<br /></React.Fragment>
+                        : <React.Fragment key={i}>{word} </React.Fragment>
+                  )
+                : t('navigation', tab.id)
+              }
             </span>
           </button>
         ))}

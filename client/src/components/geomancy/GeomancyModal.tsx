@@ -103,7 +103,7 @@ const GeomancyModal: React.FC<GeomancyModalProps> = ({
                 </div>
               </div>
               
-              <div className="md:w-2/3 md:pl-6 border-t md:border-t-0 md:border-l border-grimoire-gold/50 md:pl-10 pt-6 md:pt-0">
+              <div className="md:w-2/3 border-t md:border-t-0 md:border-l border-grimoire-gold/50 md:pl-10 pt-6 md:pt-0">
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-accent text-grimoire-gold text-lg">{t('geomancy', 'element')}</h4>
