@@ -1,0 +1,398 @@
+[
+  {
+    "number": 11,
+    "tarot_trump": "El Loco / The Fool",
+    "hebrew_letter": "א (Aleph)",
+    "element_planet_zodiac": "Aire / Air",
+    "from": 1,
+    "to": 2,
+    "path_title_es": "El Espíritu del Éter",
+    "path_title_en": "The Spirit of the Aether",
+    "significado_es": "Libertad, inicio, espontaneidad",
+    "meaning_en": "Freedom, beginnings, spontaneity",
+    "colors": {
+      "atziluth": { "en": "Bright pale yellow", "es": "Amarillo pálido brillante" },
+      "beriyah":  { "en": "Sky blue",           "es": "Azul cielo" },
+      "yetzirah": { "en": "Blue emerald",       "es": "Azul esmeralda" },
+      "asiyah":   { "en": "Emerald flecked gold", "es": "Esmeralda salpicada de oro" }
+    }
+  },
+  {
+    "number": 12,
+    "tarot_trump": "El Mago / The Magician",
+    "hebrew_letter": "ב (Beth)",
+    "element_planet_zodiac": "Mercurio / Mercury",
+    "from": 1,
+    "to": 3,
+    "path_title_es": "El Mago del Poder",
+    "path_title_en": "The Magus of Power",
+    "significado_es": "Habilidad, control, iniciativa",
+    "meaning_en": "Skill, control, initiative",
+    "colors": {
+      "atziluth": { "en": "Yellow", "es": "Amarillo" },
+      "beriyah":  { "en": "Purple", "es": "Púrpura" },
+      "yetzirah": { "en": "Grey", "es": "Gris" },
+      "asiyah":   { "en": "Indigo, flecked violet", "es": "Índigo salpicado de violeta" }
+    }
+  },
+  {
+    "number": 13,
+    "tarot_trump": "La Sacerdotisa / The High Priestess",
+    "hebrew_letter": "ג (Gimel)",
+    "element_planet_zodiac": "Luna / Moon",
+    "from": 1,
+    "to": 6,
+    "path_title_es": "La Sacerdotisa de la Estrella de Plata",
+    "path_title_en": "The Priestess of the Silver Star",
+    "significado_es": "Intuición, misterio, sabiduría oculta",
+    "meaning_en": "Intuition, mystery, hidden wisdom",
+    "colors": {
+      "atziluth": { "en": "Blue", "es": "Azul" },
+      "beriyah":  { "en": "Silver", "es": "Plata" },
+      "yetzirah": { "en": "Cold pale blue", "es": "Azul pálido frío" },
+      "asiyah":   { "en": "Silver, rayed sky blue", "es": "Plata con rayos de azul cielo" }
+    }
+  },
+  {
+    "number": 14,
+    "tarot_trump": "La Emperatriz / The Empress",
+    "hebrew_letter": "ד (Daleth)",
+    "element_planet_zodiac": "Venus",
+    "from": 3,
+    "to": 2,
+    "path_title_es": "La Hija de los Poderosos",
+    "path_title_en": "The Daughter of the Mighty Ones",
+    "significado_es": "Creatividad, fertilidad, abundancia",
+    "meaning_en": "Creativity, fertility, abundance",
+    "colors": {
+      "atziluth": { "en": "Emerald green", "es": "Verde esmeralda" },
+      "beriyah":  { "en": "Sky blue", "es": "Azul cielo" },
+      "yetzirah": { "en": "Early spring green", "es": "Verde primavera temprana" },
+      "asiyah":   { "en": "Bright rose or cerise, rayed pale green", "es": "Rosa brillante o cereza, con rayos de verde pálido" }
+    }
+  },
+  {
+    "number": 15,
+    "tarot_trump": "El Emperador / The Emperor",
+    "hebrew_letter": "ה (Heh)",
+    "element_planet_zodiac": "Aries",
+    "from": 2,
+    "to": 6,
+    "path_title_es": "El Hijo de la Mañana",
+    "path_title_en": "The Son of the Morning",
+    "significado_es": "Autoridad, estructura, control",
+    "meaning_en": "Authority, structure, control",
+    "colors": {
+      "atziluth": { "en": "Scarlet red", "es": "Rojo escarlata" },
+      "beriyah":  { "en": "Brilliant flame", "es": "Llama brillante" },
+      "yetzirah": { "en": "Glowing red", "es": "Rojo resplandeciente" },
+      "asiyah":   { "en": "Red", "es": "Rojo" }
+    }
+  },
+  {
+    "number": 16,
+    "tarot_trump": "El Hierofante / The Hierophant",
+    "hebrew_letter": "ו (Vau)",
+    "element_planet_zodiac": "Tauro / Taurus",
+    "from": 2,
+    "to": 4,
+    "path_title_es": "El Mago de los Dioses Eternos",
+    "path_title_en": "The Magus of the Eternal Gods",
+    "significado_es": "Conocimiento tradicional, conformidad, moralidad",
+    "meaning_en": "Traditional knowledge, conformity, morality",
+    "colors": {
+      "atziluth": { "en": "Red orange", "es": "Naranja rojizo" },
+      "beriyah":  { "en": "Deep indigo", "es": "Índigo profundo" },
+      "yetzirah": { "en": "Deep warm olive", "es": "Oliva cálido profundo" },
+      "asiyah":   { "en": "Rich brown", "es": "Marrón intenso" }
+    }
+  },
+  {
+    "number": 17,
+    "tarot_trump": "Los Amantes / The Lovers",
+    "hebrew_letter": "ז (Zayin)",
+    "element_planet_zodiac": "Géminis / Gemini",
+    "from": 3,
+    "to": 6,
+    "path_title_es": "Los Hijos de la Voz Divina",
+    "path_title_en": "The Children of the Divine Voice",
+    "significado_es": "Elección, amor, unión, decisiones morales",
+    "meaning_en": "Choice, love, union, moral decisions",
+    "colors": {
+      "atziluth": { "en": "Orange", "es": "Naranja" },
+      "beriyah":  { "en": "Pale mauve", "es": "Malva pálido" },
+      "yetzirah": { "en": "New yellow leather", "es": "Cuero amarillo nuevo" },
+      "asiyah":   { "en": "Reddish grey inclined to mauve", "es": "Gris rojizo tendiendo a malva" }
+    }
+  },
+  {
+    "number": 18,
+    "tarot_trump": "El Carro / The Chariot",
+    "hebrew_letter": "ח (Chet)",
+    "element_planet_zodiac": "Cáncer / Cancer",
+    "from": 3,
+    "to": 5,
+    "path_title_es": "El Hijo del Poder de las Aguas",
+    "path_title_en": "The Son of the Power of the Waters",
+    "significado_es": "Control, victoria, determinación, dirección",
+    "meaning_en": "Control, victory, determination, direction",
+    "colors": {
+      "atziluth": { "en": "Amber", "es": "Ámbar" },
+      "beriyah":  { "en": "Maroon", "es": "Granate" },
+      "yetzirah": { "en": "Rich bright russet", "es": "Castaño rojizo brillante" },
+      "asiyah":   { "en": "Dark greenish brown", "es": "Marrón oscuro verdoso" }
+    }
+  },
+  {
+    "number": 19,
+    "tarot_trump": "La Fuerza / Strength",
+    "hebrew_letter": "ט (Teth)",
+    "element_planet_zodiac": "Leo",
+    "from": 2,
+    "to": 5,
+    "path_title_es": "La Guía del León",
+    "path_title_en": "The Guide of the Lion",
+    "significado_es": "Fuerza interior, coraje, persuasión, influencia",
+    "meaning_en": "Inner strength, courage, persuasion, influence",
+    "colors": {
+      "atziluth": { "en": "Greenish yellow", "es": "Amarillo verdoso" },
+      "beriyah":  { "en": "Deep purple", "es": "Púrpura profundo" },
+      "yetzirah": { "en": "Grey", "es": "Gris" },
+      "asiyah":   { "en": "Reddish yellow", "es": "Amarillo rojizo" }
+    }
+  },
+  {
+    "number": 20,
+    "tarot_trump": "El Ermitaño / The Hermit",
+    "hebrew_letter": "י (Yod)",
+    "element_planet_zodiac": "Virgo",
+    "from": 4,
+    "to": 6,
+    "path_title_es": "El Mago de la Voz de la Luz",
+    "path_title_en": "The Magus of the Voice of Light",
+    "significado_es": "Introspección, guía, prudencia, sabiduría",
+    "meaning_en": "Introspection, guidance, wisdom",
+    "colors": {
+      "atziluth": { "en": "Yellowish Green", "es": "Verde amarillento" },
+      "beriyah":  { "en": "Indigo", "es": "Índigo" },
+      "yetzirah": { "en": "Greenish Grey", "es": "Gris verdoso" },
+      "asiyah":   { "en": "Plum", "es": "Ciruela" }
+    }
+  },
+  {
+    "number": 21,
+    "tarot_trump": "La Rueda de la Fortuna / Wheel of Fortune",
+    "hebrew_letter": "כ (Kaph)",
+    "element_planet_zodiac": "Júpiter / Jupiter",
+    "from": 4,
+    "to": 5,
+    "path_title_es": "El Señor de las Fuerzas de la Vida",
+    "path_title_en": "The Lord of the Forces of Life",
+    "significado_es": "Cambio, ciclos, destino inevitable",
+    "meaning_en": "Change, cycles, destiny",
+    "colors": {
+      "atziluth": { "en": "Violet", "es": "Violeta" },
+      "beriyah":  { "en": "Purple tinged blue", "es": "Púrpura con tinte azul" },
+      "yetzirah": { "en": "Bright purple", "es": "Púrpura brillante" },
+      "asiyah":   { "en": "Blue rayed yellow", "es": "Amarillo con rayos azules" }
+    }
+  },
+  {
+    "number": 22,
+    "tarot_trump": "La Justicia / Justice",
+    "hebrew_letter": "ל (Lamed)",
+    "element_planet_zodiac": "Libra",
+    "from": 5,
+    "to": 6,
+    "path_title_es": "La Hija del Señor de la Verdad",
+    "path_title_en": "The Daughter of the Lord of Truth",
+    "significado_es": "Equidad, verdad, legalidad, causa y efecto",
+    "meaning_en": "Equity, truth, legality, cause and effect",
+    "colors": {
+      "atziluth": { "en": "Emerald Blue", "es": "Azul esmeralda" },
+      "beriyah":  { "en": "Deep Blue-green", "es": "Azul verdoso profundo" },
+      "yetzirah": { "en": "Pale Green", "es": "Verde pálido" },
+      "asiyah":   { "en": "", "es": "" }
+    }
+  },
+  {
+    "number": 23,
+    "tarot_trump": "El Colgado / The Hanged Man",
+    "hebrew_letter": "מ (Mem)",
+    "element_planet_zodiac": "Agua / Water",
+    "from": 4,
+    "to": 7,
+    "path_title_es": "El Espíritu de las Aguas Poderosas",
+    "path_title_en": "The Spirit of the Mighty Waters",
+    "significado_es": "Sacrificio, nueva perspectiva, renuncia",
+    "meaning_en": "Sacrifice, new perspective, renunciation",
+    "colors": {
+      "atziluth": { "en": "Deep Blue", "es": "Azul profundo" },
+      "beriyah":  { "en": "Sea Green", "es": "Verde mar" },
+      "yetzirah": { "en": "Deep Olive Green", "es": "Oliva profundo" },
+      "asiyah":   { "en": "White flecked purple", "es": "Blanco salpicado de púrpura" }
+    }
+  },
+  {
+    "number": 24,
+    "tarot_trump": "La Muerte / Death",
+    "hebrew_letter": "נ (Nun)",
+    "element_planet_zodiac": "Escorpio / Scorpio",
+    "from": 5,
+    "to": 8,
+    "path_title_es": "El Señor de las Puertas de la Muerte",
+    "path_title_en": "The Lord of the Gates of Death",
+    "significado_es": "Fin, transformación, transición",
+    "meaning_en": "End, transformation, transition",
+    "colors": {
+      "atziluth": { "en": "Green", "es": "Verde" },
+      "beriyah":  { "en": "Blue", "es": "Azul" },
+      "yetzirah": { "en": "Dull Brown", "es": "Marrón apagado" },
+      "asiyah":   { "en": "Very Dark Brown", "es": "Marrón muy oscuro" }
+    }
+  },
+  {
+    "number": 25,
+    "tarot_trump": "La Templanza / Temperance",
+    "hebrew_letter": "ס (Samek)",
+    "element_planet_zodiac": "Sagitario / Sagittarius",
+    "from": 6,
+    "to": 7,
+    "path_title_es": "La Hija de los Reconciliadores",
+    "path_title_en": "The Daughter of the Reconcilers",
+    "significado_es": "Equilibrio, moderación, propósito, significado",
+    "meaning_en": "Balance, moderation, purpose, meaning",
+    "colors": {
+      "atziluth": { "en": "Blue", "es": "Azul" },
+      "beriyah":  { "en": "Yellow Green", "es": "Verde amarillento" },
+      "yetzirah": { "en": "Dark vivid blue", "es": "Azul oscuro vívido" },
+      "asiyah":   { "en": "", "es": "" }
+    }
+  },
+  {
+    "number": 26,
+    "tarot_trump": "El Diablo / The Devil",
+    "hebrew_letter": "ע (Ayin)",
+    "element_planet_zodiac": "Capricornio / Capricorn",
+    "from": 6,
+    "to": 8,
+    "path_title_es": "El Señor de las Puertas de la Materia",
+    "path_title_en": "The Lord of the Gates of Matter",
+    "significado_es": "Materialismo, obsesión, desilusión",
+    "meaning_en": "Materialism, obsession, disappointment",
+    "colors": {
+      "atziluth": { "en": "Indigo Black", "es": "Negro índigo" },
+      "beriyah":  { "en": "Blue Black", "es": "Negro azulado" },
+      "yetzirah": { "en": "Cold very dark grey", "es": "Gris muy oscuro frío" },
+      "asiyah":   { "en": "", "es": "" }
+    }
+  },
+  {
+    "number": 27,
+    "tarot_trump": "La Torre / The Tower",
+    "hebrew_letter": "פ (Peh)",
+    "element_planet_zodiac": "Marte / Mars",
+    "from": 7,
+    "to": 8,
+    "path_title_es": "El Señor de las Huestes de los Poderosos",
+    "path_title_en": "The Lord of the Hosts of the Mighty",
+    "significado_es": "Caída, revelación repentina, crisis",
+    "meaning_en": "Fall, sudden revelation, crisis",
+    "colors": {
+      "atziluth": { "en": "Scarlet Red", "es": "Rojo escarlata" },
+      "beriyah":  { "en": "Venetian Red", "es": "Rojo veneciano" },
+      "yetzirah": { "en": "Bright Red, rayed Azure and Emerald", "es": "Rojo brillante, con rayos de azul y esmeralda" },
+      "asiyah":   { "en": "", "es": "" }
+    }
+  },
+  {
+    "number": 28,
+    "tarot_trump": "La Estrella / The Star",
+    "hebrew_letter": "צ (Tzadik)",
+    "element_planet_zodiac": "Acuario / Aquarius",
+    "from": 7,
+    "to": 9,
+    "path_title_es": "La Hija del Firmamento",
+    "path_title_en": "The Daughter of the Firmament",
+    "significado_es": "Esperanza, inspiración, serenidad",
+    "meaning_en": "Hope, inspiration, serenity",
+    "colors": {
+      "atziluth": { "en": "Violet", "es": "Violeta" },
+      "beriyah":  { "en": "Sky blue", "es": "Azul cielo" },
+      "yetzirah": { "en": "Bluish-mauve", "es": "Malva azulado" },
+      "asiyah":   { "en": "White, faintly tinted purple", "es": "Blanco, ligeramente teñido de púrpura" }
+    }
+  },
+  {
+    "number": 29,
+    "tarot_trump": "La Luna / The Moon",
+    "hebrew_letter": "ק (Qoph)",
+    "element_planet_zodiac": "Piscis / Pisces",
+    "from": 7,
+    "to": 10,
+    "path_title_es": "La Gobernadora del Flujo y del Reflujo",
+    "path_title_en": "The Governor of the Flow and Ebb",
+    "significado_es": "Confusión, miedo, ilusión",
+    "meaning_en": "Confusion, fear, illusion",
+    "colors": {
+      "atziluth": { "en": "Crimson Buff flecked silver-white", "es": "Carmesí crema salpicado de blanco plateado" },
+      "beriyah":  { "en": "Light translucent pinkish brown", "es": "Marrón rosado claro translúcido" },
+      "yetzirah": { "en": "Stone", "es": "Piedra" },
+      "asiyah":   { "en": "", "es": "" }
+    }
+  },
+  {
+    "number": 30,
+    "tarot_trump": "El Sol / The Sun",
+    "hebrew_letter": "ר (Resh)",
+    "element_planet_zodiac": "Sol / Sun",
+    "from": 6,
+    "to": 9,
+    "path_title_es": "El Señor del Fuego del Mundo",
+    "path_title_en": "The Lord of the Fire of the World",
+    "significado_es": "Éxito, vitalidad, alegría",
+    "meaning_en": "Success, vitality, joy",
+    "colors": {
+      "atziluth": { "en": "Orange Gold yellow", "es": "Amarillo dorado anaranjado" },
+      "beriyah":  { "en": "Rich amber", "es": "Ámbar intenso" },
+      "yetzirah": { "en": "Amber rayed red", "es": "Ámbar con rayos rojos" },
+      "asiyah":   { "en": "", "es": "" }
+    }
+  },
+  {
+    "number": 31,
+    "tarot_trump": "El Juicio / Judgement",
+    "hebrew_letter": "ש (Shin)",
+    "element_planet_zodiac": "Fuego / Fire",
+    "from": 8,
+    "to": 10,
+    "path_title_es": "El Espíritu del Fuego Primordial",
+    "path_title_en": "The Spirit of Primordial Fire",
+    "significado_es": "Evaluación, resurrección, juicio",
+    "meaning_en": "Evaluation, resurrection, judgment",
+    "colors": {
+      "atziluth": { "en": "Glowing orange scarlet", "es": "Escarlata anaranjado resplandeciente" },
+      "beriyah":  { "en": "Vermilion", "es": "Bermellón" },
+      "yetzirah": { "en": "Scarlet flecked gold", "es": "Escarlata salpicado de oro" },
+      "asiyah":   { "en": "Vermilion flecked crimson", "es": "Bermellón salpicado de carmesí" }
+    }
+  },
+  {
+    "number": 32,
+    "tarot_trump": "El Universo / The Universe",
+    "hebrew_letter": "ת (Tav)",
+    "element_planet_zodiac": "Saturno / Saturn",
+    "from": 9,
+    "to": 10,
+    "path_title_es": "El Grande de la Noche del Tiempo",
+    "path_title_en": "The Great One of the Night of Time",
+    "significado_es": "Cumplimiento, síntesis, éxito",
+    "meaning_en": "Fulfillment, synthesis, success",
+    "colors": {
+      "atziluth": { "en": "Indigo Black Blue-black", "es": "Azul-negro índigo" },
+      "beriyah":  { "en": "Black rayed Blue", "es": "Negro con rayos azules" },
+      "yetzirah": { "en": "", "es": "" },
+      "asiyah":   { "en": "", "es": "" }
+    }
+  }
+]

@@ -29,6 +29,11 @@ const NavigationTabs: React.FC<NavigationTabsProps> = ({ activeTab, setActiveTab
       id: 'planetaryHours', 
       imageSrc: 'https://i.pinimg.com/736x/ab/ff/51/abff51c3b04c0036f4507d458ad08209.jpg',
       color: 'bg-grimoire-gold' 
+    },
+    { 
+      id: 'treeOfLife', 
+      imageSrc: 'https://i.pinimg.com/736x/cc/05/24/cc05242737f3d15abbe7c1665dc9b092.jpg',
+      color: 'bg-grimoire-green' 
     }
   ];
 
@@ -57,7 +62,15 @@ const NavigationTabs: React.FC<NavigationTabsProps> = ({ activeTab, setActiveTab
                         ? <React.Fragment key={i}>{word}<br /></React.Fragment>
                         : <React.Fragment key={i}>{word} </React.Fragment>
                   )
-                : t('navigation', tab.id)
+                : tab.id === 'treeOfLife'
+                  ? t('navigation', tab.id).split(' ').map((word: string, i: number, arr: string[]) =>
+                      i === arr.length - 1
+                        ? <React.Fragment key={i}>{word}</React.Fragment>
+                        : i === 0
+                          ? <React.Fragment key={i}>{word}<br /></React.Fragment>
+                          : <React.Fragment key={i}>{word} </React.Fragment>
+                    )
+                  : t('navigation', tab.id)
               }
             </span>
           </button>

@@ -11,6 +11,7 @@ const translations: Record<Language, SiteTranslations> = {
       astrology: "Astrology",
       geomancy: "Geomancy",
       planetaryHours: "Planetary Hours",
+      treeOfLife: "Tree of Life",
     },
     tarot: {
       title: "Tarot Arcana",
@@ -124,6 +125,7 @@ const translations: Record<Language, SiteTranslations> = {
       astrology: "Astrología",
       geomancy: "Geomancia",
       planetaryHours: "Horas Planetarias",
+      treeOfLife: "Árbol de la Vida",
     },
     tarot: {
       title: "Arcanos del Tarot",

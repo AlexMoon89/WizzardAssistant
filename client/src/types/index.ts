@@ -207,6 +207,7 @@ export interface SiteTranslations {
     astrology: string;
     geomancy: string;
     planetaryHours: string;
+    treeOfLife: string;
   };
   tarot: {
     title: string;

@@ -32,6 +32,7 @@
   --grimoire-amber: 46 70% 52%;
   --grimoire-crimson: 348 100% 47%;
   --grimoire-teal: 180 100% 25%;
+  --grimoire-green: 120 40% 30%;
   --grimoire-parchment: 39 60% 87%;
   --grimoire-paper: 39 50% 81%;
   --grimoire-dark: 0 0% 5%;
@@ -153,6 +154,10 @@
 
   .bg-grimoire-teal {
     background-color: hsl(var(--grimoire-teal));
+  }
+
+  .bg-grimoire-green {
+    background-color: hsl(var(--grimoire-green));
   }
 
   .bg-grimoire-parchment {

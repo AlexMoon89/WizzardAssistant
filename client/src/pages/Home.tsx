@@ -6,6 +6,7 @@ import TarotSection from '@/components/tarot/TarotSection';
 import AstrologySection from '@/components/astrology/AstrologySection';
 import GeomancySection from '@/components/geomancy/GeomancySection';
 import PlanetaryHours from '@/components/planetary/PlanetaryHours';
+import TreeOfLifeSection from '@/components/treeoflife/TreeOfLifeSection';
 import { isOffline } from '@/lib/utils';
 
 const Home: React.FC = () => {
@@ -58,6 +59,9 @@ const Home: React.FC = () => {
 
           {/* Planetary Hours Tab Content */}
           {activeTab === 'planetaryHours' && <PlanetaryHours />}
+
+          {/* Tree of Life Tab Content */}
+          {activeTab === 'treeOfLife' && <TreeOfLifeSection />}
         </main>
 
         <Footer />
